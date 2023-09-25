@@ -1,0 +1,66 @@
+
+body {
+    font-family: Tahoma, Verdana, Sans-serif;
+}
+
+#contenedor {
+    border: 1px solid #b0acac;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+/* Header */
+header nav {
+    text-align: left;
+}
+
+nav {
+    padding-left: 15px;
+}
+
+/* main */
+main {
+    float:left;
+    width: 60%;
+    text-align: left;
+    padding: 15px;
+}
+
+aside {
+    float: right;
+}
+
+aside:last-child ul li {
+    list-style-image: url("../img/bullet.gif");
+}
+
+.tarjeta {
+    background-color: rgb(202, 202, 233);
+    padding: 20px;
+}
+
+.tarjeta h2 {
+    color: #fff;
+    background-color: rgb(49, 49, 235);
+}
+
+
+/* Los input de text que están dentro de la tarjeta*/
+.tarjeta input[type="text"] {
+    color: red;
+}
+
+/*El nombre de los input que empieza por bus */
+input[name^='bus'] {
+    font-weight: bold;
+}
+
+.limpiar {
+    clear: both;
+}
+
+/* footer  */
+footer {
+    text-align: left;
+}

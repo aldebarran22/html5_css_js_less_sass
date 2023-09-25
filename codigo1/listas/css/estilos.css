@@ -1,0 +1,51 @@
+
+.menu-vertical {
+    width:150px;
+}
+
+.menu-vertical li {
+    /*padding: 0px 10px;*/
+    margin-bottom: 5px;
+    min-height: 20px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+    
+}
+
+.menu-vertical li a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.menu-vertical li a:HOVER {
+    background-color: orangered;   
+    border-radius: 2px; 
+}
+
+
+.menu-horizontal {
+    width: 75%;
+}
+
+.menu-horizontal li {
+    list-style: none;
+    display: inline;
+    border: 1px solid grey;
+    width: 75px;
+}
+
+.menu-horizontal li a {
+    text-decoration:none;
+    color:black;
+    width:100%;
+    padding: 2px 10px;
+}
+
+.menu-horizontal li a:HOVER {
+    background-color: orangered;   
+}
+
+
+

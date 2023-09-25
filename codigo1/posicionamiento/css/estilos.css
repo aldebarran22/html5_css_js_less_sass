@@ -1,0 +1,17 @@
+.centrado {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid grey;   
+    text-align: center;
+    height: 150px;
+}
+
+.alineacion1 {
+    display: flex;
+    justify-content: space-between; /* alineación horizontal */
+    align-items: center; /* alineación vertical*/
+}
+
+.alineacion1 p {
+    margin:0px 10px;
+}

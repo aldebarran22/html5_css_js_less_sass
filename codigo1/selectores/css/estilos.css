@@ -1,0 +1,79 @@
+/* Custom properties */
+:root {
+    --color_texto: black;
+    --tamaño_fuente: 3.5rem;
+}
+
+
+.centrado {
+    margin: 20px auto;
+    width: 80%;
+    border: 1px solid grey;   
+    text-align: center;
+}
+
+.contenedor {
+    font-family: Tahoma;
+    background-color: rgb(201, 201, 229);
+}
+
+.contenedor p:nth-child(odd) {
+    color: orange;
+}
+
+.contenedor p:nth-child(even){
+    color:blue;
+}
+
+.contenedor2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(46, 46, 50);
+    color: white;
+}
+
+.contenedor2 p:nth-child(3) {
+    color: red;
+}
+
+.contenedor3 {
+    background-color: rgb(32, 32, 133);
+}
+
+.contenedor3 p:first-child {
+    color:yellow;
+}
+
+/* Todos los párrafos dentro de externo a cualquier nivel */
+/* Elementos descendientes */
+#externo  p {
+    color:red;
+}
+
+/* Los párrafos que son hijos directos de interno2 */
+#interno2 > p {
+    color: blue;
+}
+
+/* Seleccionar el elemento que va justo después del elemento indicado a la izq*/
+#externo2 p.texto2 + span {
+    color: red;
+}
+
+#externo3 p {
+    color: blue;
+}
+
+/* Seleccionar  solo los hermanos a partir del tercer párrafo */
+/* No afecta a otro nivel de anidamiento */
+#externo3 p:nth-child(3) ~ p {
+    color:var(--color_texto);
+}
+
+
+#externo4 p::first-letter {
+    font-size: var(--tamaño_fuente);
+    font-weight: bold;
+    color: brown;
+}
+
+
