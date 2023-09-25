@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Primer ejemplo de HTML5</title>
+<!-- <link rel="stylesheet" href="css/buenas_practicas.css">-->
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/contacto.css">
+<link rel="icon" href="img/iconos/icono_fecha.gif" type="image/gif">
+</head>
+<body>
+	<div id="contenedor">
+		<header id="cabecera">
+			<h1>Noticias Antena-3</h1>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Noticias</a></li>
+				<li><a href="galeria.html">Galería</a></li>				
+				<li><a href="programacion.html">Programación</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+			</ul>
+			<div class="limpiar"></div>
+		</nav>
+		<section id="contenido">
+			<h3>NUEVA CUENTA ANTENA-3</h3>
+			<form>
+				<fieldset>
+					<legend>Rellene todos los campos</legend>				
+					<table>				
+						<tr>
+							<td>NOMBRE COMPLETO</td>
+							<td><input type="text" name="nombre" required="required"></td>
+						</tr>
+						<tr>
+							<td>PASSWORD</td>
+							<td><input type="password" name="pass" required="required"></td>
+						</tr>
+						<tr>
+							<td>EMAIL</td>
+							<td><input type="email" name="correo" required="required"></td>
+						</tr>
+						<tr>
+							<td>FECHA</td>
+							<td><input type="date" name="fecha" required="required"></td>
+						</tr>																		
+						<tr>
+							<td>CIUDAD DE NACIMIENTO</td>
+							<td>
+								<select name="ciudad" required="required">
+									<option>Seleccione ciudad</option>
+									<option>Madrid</option>
+									<option>Avila</option>
+									<option>A Coruña</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>ESTADO CIVIL</td>
+							<td>
+								<input type="radio" name="estado">Casado &nbsp;
+								<input type="radio" name="estado">Divorciado &nbsp;
+								<input type="radio" name="estado">Soltero &nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>							
+							<td>
+								<input type="checkbox" name="publi" checked="checked"> Recibir publicidad
+							</td>
+						</tr>
+						<tr>
+							<td>Observaciones</td>
+							<td>
+								<textarea rows="5" cols="20" placeholder="Escriba algo..."></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td><input type="submit" name="enviar" value="GRABAR"></td>
+							<td><input type="reset" name="limpiar" value="LIMPIAR"></td>
+						</tr>			
+					</table>
+				</fieldset>
+			</form>								
+		</section>
+		<aside id="derecha">
+			<h3 id="cab_buscador">Buscador</h3>
+			<form>
+				<input type="text" name="texto" class="campo_form">
+				<input type="submit" name="Enviar" value="Enviar">
+			</form>
+			<h3>Enlaces de interés</h3>
+			<ul>
+				<li><a href="http://www.google.es">Google</a></li>
+				<li><a href="http://www.altavista.es">Altavista</a></li>
+			</ul>			
+		</aside>
+		<div class="limpiar"></div>
+		<footer id="pie_pagina">
+			<h4>Redes Sociales</h4>
+			<ul id="redes_sociales">
+				<li><a href="http://www.facebook.com"><img src="img/iconos/facebook_off.png" title="Fabebook" alt="Facebook"></a></li>
+				<li><a href="http://www.twitter.com"><img src="img/iconos/twitter_off.png" title="Twitter" alt="Twitter"></a></li>
+				<li><a href="http://www.instagram.com"><img src="img/iconos/instagram_off.png" title="Instagram" alt="Instagram"></a></li>
+				<li><a href="http://www.pinterest.com"><img src="img/iconos/pinterest_off.png" title="Pinterest" alt="Pinterest"></a></li>								
+			</ul>
+			&copy; 2017 - ANTENA 3 - <a href="mailto:webmaster@a3.com">CONTACTO</a>
+		</footer>
+	</div>	
+</body>
+</html>

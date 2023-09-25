@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+#contenido {
+	float:left;
+	width: 65%;
+	text-align: justify;
+	padding: 15px;
+}
+
+#contenido article {
+	height: 150px;
+	transition: height 2s;
+}
+
+#contenido article:HOVER {
+	height: 300px;	
+}

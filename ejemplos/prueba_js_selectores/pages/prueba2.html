@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .redText {
+            color:#FF0000;
+        }
+    </style>
+    <script type="text/javascript">
+        function GetRedTextElements () {
+            var container = document.getElementById ("container");
+            if (container.getElementsByClassName) {
+                var redTags = container.getElementsByClassName ("redText");
+
+                alert ("There are " + redTags.length + " elements in the container with class 'redText'.");
+
+                    // add a new bold element to the container
+                var newRedText = document.createElement ("b");
+                newRedText.innerHTML = "new redText element";
+                newRedText.className = "redText";
+                container.appendChild (newRedText);
+                alert ("An element with class 'redText' has been added to the container.");
+
+                alert ("There are " + redTags.length + " elements in the container with class 'redText'.");
+
+                    // remove a bold element from the container
+                container.removeChild (newRedText);
+                alert ("The previously added element has been removed from the container.");
+
+                alert ("There are " + redTags.length + " elements in the container with class 'redText'.");
+            }
+            else {
+                alert ("Your browser does not support the getElementsByClassName method.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GetRedTextElements ()">Get the elements in the container with 'redText' class!</button>
+    <br /><br />
+    <div id="container">
+        <b class="redText">A bold element in the container with 'redText' class.</b>
+        <br />
+        <i class="redText">An italic element in the container with 'redText' class.</i>
+        <br />
+    </div>
+</body>
+</html>

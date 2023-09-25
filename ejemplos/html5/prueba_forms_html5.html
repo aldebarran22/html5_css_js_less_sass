@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<nav>
+		<p>
+			<input type="search" name="buscador" form="miFormulario">
+		</p>
+	</nav>
+	<section>
+		<form name="miFormulario" action="#" method="get" id="miFormulario">
+			<datalist id="info">
+				<option value="112">Emergencias</option>
+				<option value="091">Policía</option>
+				<option value="060">Ambulancias</option>
+			</datalist>
+			<p>
+				Telefono de asistencia: <input type="tel" name="tno" id="tno"
+					list="info" />
+			</p>
+			<p>
+				DNI: <input type="text" id="dni" name="dni" pattern="[0-9]{8}[A-F]" />
+			</p>
+			<p>
+				Nombre: <input type="text" id="nombre" name="nombre"
+					required="required" />
+			</p>
+			<p>
+				busqueda: <input type="search" id="busqueda" name="busqueda" />
+			</p>
+			<p>
+				email: <input type="email" id="correo" name="correo"
+					multiple="multiple" />
+			</p>
+			<p>
+				Telefono: <input type="tel" id="telefono" name="telefono"
+					autofocus="autofocus" />
+			</p>
+			<p>
+				url: <input type="url" id="url" name="url" placeholder="http://" />
+			</p>
+			<p>
+				Date: <input type="date" id="fecha" name="fecha" />
+			</p>
+			<p>
+				Week: <input type="week" id="fecha2" name="fecha2" />
+			</p>
+			<p>
+				Month: <input type="month" id="fecha3" name="fecha3" />
+			</p>
+			<p>
+				time: <input type="time" id="fecha4" name="fecha4" />
+			</p>
+			<p>
+				datetime: <input type="datetime" id="fecha5" name="fecha5" />
+			</p>
+			<p>
+				datetime-local: <input type="datetime-local" id="fecha6"
+					name="fecha6" />
+			</p>
+			<p>
+				Range: <input type="range" name="deslizador" min="1" max="100"
+					step="1">
+			</p>
+			<p>
+				Number: <input type="number" name="numero" id="numero" min="5"
+					max="100" step="5" />
+			</p>
+			<p>
+				Color: <input type="color" name="color" id="color" />
+			</p>
+			<p>
+				<progress id="progreso" value="5" max="10"></progress>
+			</p>
+			<p>
+				<meter value="7" min="1" max="10" low="3" high="6" optimum="9"></meter>
+			</p>
+			<input type="submit" name="enviar" value="enviar" />
+		</form>
+	
+		<form style="border: 2px solid blue" oninput="resultado.value = parseInt(valor1.value) + parseInt(valor2.value)">
+			<input type="number" name="valor1" />
+			<input type="number" name="valor2" />
+			<output name="resultado">0</output>
+		</form>
+	</section>
+</body>
+</html>

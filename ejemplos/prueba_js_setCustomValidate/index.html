@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+
+function iniciar(){
+	// Configurar eventos:
+	var email = document.getElementById("correo");
+	email.addEventListener("input", checkMail, false);
+	
+	var tno = document.getElementById("tno");
+	tno.addEventListener("input", checkTno, false);
+}
+
+function checkMail() {  
+	var input = document.getElementById("correo");
+	
+    if(input.validity.typeMismatch){  
+        input.setCustomValidity("La dirección '" + input.value + "' no es correcta");  
+    }  
+    else {  
+        input.setCustomValidity("");  
+    }                 
+} 
+
+function checkTno(){
+	var tno = document.getElementById("tno");
+	
+	if (tno.value != '91')
+		tno.setCustomValidity("El tno '" + tno.value + "' no es correcto"); 
+}
+
+addEventListener("load", iniciar, false);
+</script>
+</head>
+<body>
+	<h3>Ejemplos de validación personalizada</h3>
+	<form>
+		<label for="correo">CORREO:</label>
+		<input type="email" id="correo" name="correo"><br /><br />
+		<label for="Telefono">Teléfono de Madrid:</label>
+		<input type="tno" id="tno" name="tno"><br />
+		<input type="submit" name="enviar" value="enviar">		
+	</form>
+</body>
+</html>

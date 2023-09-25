@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	window.onload = function() {
+		var p1 = document.querySelector("#principal p:first-child");
+		alert("Contenido Primer parrafo: " + p1.firstChild.nodeValue);
+
+		var p2 = document.querySelector("#principal p:last-child");
+		alert("Contenido Segundo parrafo: " + p2.firstChild.nodeValue);
+
+		var pp = document.querySelectorAll("#principal p");
+		alert("Número de parrafos: " + pp.length);
+
+		for ( var i = 0; i < pp.length; i++) {
+			alert("p: " + pp[i].firstChild.nodeValue);
+		}
+	}
+
+	function alerta() {
+		alert(this);
+	}
+
+	window.onload = function() {
+		var elBody = document.getElementsByTagName('body')[0];
+		var elDiv = document.getElementById('elDiv');
+		var elButton = document.getElementById('elButton');
+		elBody.addEventListener('click', alerta, false);
+		elDiv.addEventListener('click', alerta, false);
+		elButton.addEventListener('click', alerta, false);
+	}
+</script>
+</head>
+<body>
+	<div id="principal">
+		<p>Primer parrafo</p>
+		<p>Otro parrafo</p>
+		<p>Ultimo parrafo</p>
+	</div>
+	<div id="elDiv">
+		<input type="button" id="elButton" value="boton">
+	</div>
+</body>
+</html>

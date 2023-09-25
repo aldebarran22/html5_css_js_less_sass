@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+
+#contenido {
+	float:left;
+	width: 65%;
+	padding: 15px;
+}
+
+#contenido table {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	border-collapse: collapse; /* Unifica la cabecera */
+}
+
+caption {
+	font-weight: bold;
+	margin-bottom: 5px;	
+}
+
+th {
+	background-color: orange;
+	color: gray;
+}
+
+tr:nth-of-type(even){
+	background-color: #F3F3F3;
+}
+
+tr:nth-of-type(odd){
+	background-color:#ddd;
+	color: orange;
+}
+
+tr:last-child {
+	height: 25px;
+	font-weight: bolder;
+}
+

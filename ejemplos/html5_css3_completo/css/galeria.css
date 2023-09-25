@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+
+#contenido {
+	float:left;
+	width: 65%;
+	padding: 15px;
+	text-align: center;
+}
+
+table img {
+	width: 70%;	
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.diapositiva {	    
+	border: 2px solid #AAAAAA;
+	margin: 30px;
+	border-radius: 10px;
+	background-color: #EEEEEE;
+	animation: fadein 4s;	
+}
+
+.diapositiva img {
+	border-radius: 20px;	
+}
+
+
+.diapositiva h2 {
+	width: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	background-color: #ACACAC;
+	padding: 3px;
+}

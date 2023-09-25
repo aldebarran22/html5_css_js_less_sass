@@ -1,0 +1,26 @@
+table{
+width: 600px;
+border-collapse: collapse;
+}
+
+th, td{
+border: none;
+}
+
+th{
+background-color: #000;
+color: #fff;
+}
+
+table tr:nth-child(3n){
+		background-color: #aaa;
+}
+
+tr:nth-last-child(2){
+color: green;
+}
+
+tr:nth-last-child(-n+3) td{
+text-align: right;
+}
+

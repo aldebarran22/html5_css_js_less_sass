@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .redText {
+            color:#FF0000;
+        }
+        .boldText {
+            font-weight:bold;
+        }
+        .italicText {
+            font-style:italic;
+        }
+    </style>
+    <script type="text/javascript">
+        function GetRedTextElements () {
+            var container = document.getElementById ("container");
+            if (container.getElementsByClassName) {
+                var redTags = container.getElementsByClassName ("redText");
+
+                alert ("There are " + redTags.length + " elements in the container with class of 'redText'.");
+
+                for (var i = 0; i < redTags.length; i++) {
+                    var redTag = redTags[i];
+                    alert ("The contents of the " + (i + 1) + ". redText element are\n" + redTag.innerHTML);
+                }
+            }
+            else {
+                alert ("Your browser does not support the getElementsByClassName method.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="GetRedTextElements ()">Get the elements in the container with class of 'redText'!</button>
+    <br /><br />
+    <div id="container">
+        <span class="redText boldText">A bold element in the container with class of 'redText'.</span>
+        <br />
+        <span class="redText italicText">An italic element in the container with class of 'redText'.</span>
+    </div>
+    <br /><br />
+    <span class="redText boldText">Another element outside the container with class of 'redText'.</span>
+    <p><a href="pages/prueba2.html">Prueba 2</a></p>
+     <p><a href="pages/prueba3.html">Prueba 3</a></p>
+</body>
+</html>
