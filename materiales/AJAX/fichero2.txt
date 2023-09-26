@@ -1,0 +1,6 @@
+Se mostrara una ventana con un boton. 
+Al pulsar este boton se abrira otra ventana en la 
+que aparecera un mensaje y dos botones. 
+Uno de los botones cerrara la ventana hija y 
+el otro cerrara la ventana padre. 
+Sera algo similar a esto:
