@@ -1,0 +1,10 @@
+/* Ejemplo de custom properties */
+:root {
+  --fondo: #232323;
+}
+
+.contenido {
+  background-color: var(--fondo);
+}
+
+/*# sourceMappingURL=custom_properties.css.map */

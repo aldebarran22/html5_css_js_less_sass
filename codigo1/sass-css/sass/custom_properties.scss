@@ -1,0 +1,11 @@
+/* Ejemplo de custom properties */
+
+$color_fondo: #232323;
+
+:root {
+    --fondo: #{$color_fondo};
+}
+
+.contenido {
+    background-color: var(--fondo);
+}

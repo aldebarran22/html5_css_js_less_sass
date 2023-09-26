@@ -1,0 +1,21 @@
+
+@use 'modulos/contenedor_dim' with (
+    $factor: 2
+);
+
+$margen-sup: -1 * (contenedor_dim.$height * contenedor_dim.$factor) / 2;
+$margen-izq: -1 * (contenedor_dim.$width * contenedor_dim.$factor) / 2;
+
+@debug 'El margen-sup: #{$margen-sup}';
+@debug 'El width: #{contenedor_dim.$width * contenedor_dim.$factor}';
+
+.centrado {
+    width: contenedor_dim.$width * contenedor_dim.$factor;
+    height: contenedor_dim.$height * contenedor_dim.$factor;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin-top: $margen-sup;
+    margin-left: $margen-izq;
+    background-color: contenedor_dim.$color_fondo;
+}

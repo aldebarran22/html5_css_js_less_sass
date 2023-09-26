@@ -1,0 +1,40 @@
+/* Uso de Variables */
+
+$color_texto: red;
+$color_fondo: blue;
+$size: 2rem;
+
+h1 {
+    color: $color-texto;
+    background-color: $color-fondo;
+    font-size: $size;
+}
+
+p {
+    color: $color_texto;
+}
+
+div.capa1 {
+    // Variable local
+    // a la regla div.capa1
+    $color-texto-div:green;
+    
+    // modificar un color global
+    // Afecta al documento hacia abajo:
+    $color-texto: yellow !global;
+
+    h2 {
+        color: $color-texto-div;
+    }
+
+    p {
+        color: $color-texto;
+    }
+}
+
+div.capa2 {
+    h2 {
+        color: $color-texto;
+    }
+}
+

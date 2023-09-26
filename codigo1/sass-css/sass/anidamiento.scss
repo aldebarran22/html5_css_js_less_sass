@@ -1,0 +1,45 @@
+
+/* header, nav, a 
+(color fondo header),
+(color fondo nav),
+(color a, quitar subrayado, :HOVER: poner subrayado) */
+
+$header_color_fondo: blue;
+$header_color_nav: rgb(126, 126, 235);
+$header_a: rgb(187, 187, 239);
+
+$footer_color_fondo:orange;
+$footer_color_nav: rgb(228, 174, 72);
+$footer_a: rgb(234, 208, 161);
+
+header {
+    background-color: $header_color_fondo;
+
+    nav {
+        background-color: $header_color_nav;
+
+        a {
+            text-decoration: none;
+            color: $header_a;
+
+            &:HOVER {
+                text-decoration: underline;
+                color: $header_color_fondo;
+            }
+        }
+    }
+}
+
+
+/* footer, nav, a 
+(color fondo header),
+(color fondo nav),
+(color a) */
+
+footer {
+    background-color: $footer_color_fondo;
+
+    nav {
+        background-color: $footer_color_nav;
+    }
+}

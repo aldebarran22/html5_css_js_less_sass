@@ -1,0 +1,20 @@
+
+/* Selectores, nombre de propiedad de CSS como
+variables de SASS */
+
+$selector: h1;
+$propiedad: color;
+$valor: red;
+$encabezado: 3;
+
+h1 {
+    color: $valor;
+}
+
+#{$selector} {
+    background-#{$propiedad}: $valor;
+}
+
+h#{$encabezado}{
+    color: $valor;
+}

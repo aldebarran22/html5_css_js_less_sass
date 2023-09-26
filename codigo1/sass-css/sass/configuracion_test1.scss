@@ -1,0 +1,9 @@
+@use 'modulos/configuracion';
+
+div {    
+    // Aunque el módulo esté en otra carpeta
+    // la variable se referencia con el nombre del módulo:
+    width: configuracion.$width;
+    height: configuracion.$height;
+    border: configuracion.$ancho_borde solid configuracion.$color_borde;
+}

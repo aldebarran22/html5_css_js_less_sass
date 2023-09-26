@@ -1,6 +1,7 @@
 
 body {
     font-family: Tahoma, Verdana, Sans-serif;
+    background: url('../img/fondo.gif');
 }
 
 #contenedor {
@@ -8,11 +9,19 @@ body {
     margin: 20px auto;
     width: 80%;
     text-align: center;
+    background-color: #fff;
 }
 
 /* Header */
+header img {
+    width: 100%;   
+    margin-bottom: 0px;
+}
+
 header nav {
+    margin-top: 0px;
     text-align: left;
+    background: url('../img/fondonav.gif') repeat-x;
 }
 
 nav {
@@ -27,8 +36,10 @@ main {
     padding: 15px;
 }
 
+/* Lateral derecho */
 aside {
     float: right;
+    width: 30%;
 }
 
 aside:last-child ul li {
@@ -63,4 +74,8 @@ input[name^='bus'] {
 /* footer  */
 footer {
     text-align: left;
+}
+
+footer nav {
+    padding: 3px;
 }

@@ -1,0 +1,40 @@
+.contenedor {
+   height: 200px;
+   width:80%;
+   border:1px solid red;
+   margin: 20px auto;
+}
+
+.flex1 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.flex2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex2 p {
+    margin: 0px 20px;
+    border: 1px solid black;
+}
+
+.contenedor_centrado  {
+    display: flex;
+    justify-content: center;    
+    height: 100vh;  
+    align-items: center;
+}
+
+.contenedor_centrado div {
+    margin: 0px auto;
+    width: 25%;
+    height: 25%;
+    background-color: blue;  
+    border: 1px solid black;  
+    display: flex;
+    justify-content: center;    
+    align-items:center;
+}

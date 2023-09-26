@@ -1,0 +1,54 @@
+.box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color:red;
+    color: white;
+}
+
+#two {
+    background-color:blue;
+    position: absolute;
+    top: 20px;
+    right:20px;
+}
+
+.contenedor2 {
+    width: 250px;
+    overflow: auto;
+    height:300px;
+    margin:20px;
+    text-align: left;
+}
+
+.caja {
+    position: fixed;
+    width:150px;
+    height: 50px;
+    background-color:blue;
+    top: 100px;
+    left:20px;
+    opacity: 0.8;
+}
+
+.centrado {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+    background-color: blue;
+}
+
+.centrado_porc {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    margin-top: -25%;
+    margin-left: -25%;
+    background-color: red;
+}

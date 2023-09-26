@@ -1,0 +1,15 @@
+
+// Solo te deja modificar las variables marcadas con default del módulo:
+@use 'modulos/configuracion' with (
+    $ancho_borde: 3px,
+    $color_borde: green
+);
+
+.container1 {
+    margin: 0px auto;
+    // Aunque el módulo esté en otra carpeta
+    // la variable se referencia con el nombre del módulo:
+    width: configuracion.$width;
+    height: configuracion.$height;
+    border: configuracion.$ancho_borde solid red;
+}

@@ -1,0 +1,23 @@
+/* Uso de Variables */
+h1 {
+  color: red;
+  background-color: blue;
+  font-size: 2rem;
+}
+
+p {
+  color: red;
+}
+
+div.capa1 h2 {
+  color: green;
+}
+div.capa1 p {
+  color: yellow;
+}
+
+div.capa2 h2 {
+  color: yellow;
+}
+
+/*# sourceMappingURL=variables.css.map */
