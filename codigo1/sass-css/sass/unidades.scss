@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+$tam1: 2px;
+$tam2: 16px;
+
+// Con uds en las 2 variables
+// Sumar y restar: ok!
+$uds: $tam1 + $tam2;
+@debug 'pixel + cm: #{$uds}';
+
+$uds: $tam2 - $tam1;
+
+// mul y div uno con unidades y el otro una cte.
+// ojo div quita unidad: 10rem / 2rem -> 5
+// 
+
+// Redondeo al alza:
+$uds: math.ceil($tam2 / 3);
+@debug 'numero e: ' math.$e;
+
+h1 {
+    font-size: $uds;
+}

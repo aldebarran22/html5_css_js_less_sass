@@ -2,17 +2,17 @@
 (color fondo header),
 (color fondo nav),
 (color a, quitar subrayado, :HOVER: poner subrayado) */
-header {
+header, footer {
   background-color: blue;
 }
-header nav {
+header nav, footer nav {
   background-color: rgb(126, 126, 235);
 }
-header nav a {
+header nav a, footer nav a {
   text-decoration: none;
   color: rgb(187, 187, 239);
 }
-header nav a:HOVER {
+header nav a:HOVER, footer nav a:HOVER {
   text-decoration: underline;
   color: blue;
 }
@@ -21,11 +21,5 @@ header nav a:HOVER {
 (color fondo header),
 (color fondo nav),
 (color a) */
-footer {
-  background-color: orange;
-}
-footer nav {
-  background-color: rgb(228, 174, 72);
-}
 
 /*# sourceMappingURL=anidamiento.css.map */

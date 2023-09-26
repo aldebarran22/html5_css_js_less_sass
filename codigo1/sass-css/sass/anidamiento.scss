@@ -12,7 +12,7 @@ $footer_color_fondo:orange;
 $footer_color_nav: rgb(228, 174, 72);
 $footer_a: rgb(234, 208, 161);
 
-header {
+header, footer {
     background-color: $header_color_fondo;
 
     nav {
@@ -36,10 +36,3 @@ header {
 (color fondo nav),
 (color a) */
 
-footer {
-    background-color: $footer_color_fondo;
-
-    nav {
-        background-color: $footer_color_nav;
-    }
-}

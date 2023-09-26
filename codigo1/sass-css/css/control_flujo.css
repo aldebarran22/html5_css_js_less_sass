@@ -1,0 +1,56 @@
+/* Control de flujo en SASS*/
+.contenedor h6 {
+  margin-top: 1px;
+  background-color: rgb(100, 100, 50);
+  font-family: Tahoma;
+  font-size: 72px;
+}
+
+.contenedor h5 {
+  margin-top: 2px;
+  background-color: #FAFAFA;
+  font-family: Tahoma;
+  font-size: 60px;
+}
+
+.contenedor h4 {
+  margin-top: 5px;
+  background-color: green;
+  font-family: Tahoma;
+  font-size: 48px;
+}
+
+.contenedor h3 {
+  margin-top: 10px;
+  background-color: red;
+  font-family: Tahoma;
+  font-size: 36px;
+}
+
+.contenedor h2 {
+  margin-top: 20px;
+  background-color: yellow;
+  font-family: Tahoma;
+  font-size: 24px;
+}
+
+.contenedor h1 {
+  margin-top: 30px;
+  background-color: blue;
+  font-family: Tahoma;
+  font-size: 12px;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: black;
+}
+
+/*# sourceMappingURL=control_flujo.css.map */

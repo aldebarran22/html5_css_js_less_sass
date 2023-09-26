@@ -1,0 +1,33 @@
+/* Control de flujo en SASS*/
+
+@use 'sass:list';
+
+$fin: 10;
+
+@for $i from 1 to $fin {
+    @debug $i;
+}
+
+@mixin comun-cabs($i) {
+    font-family: Tahoma;
+    font-size: 12px * $i;
+}
+
+$margen: 30px 20px 10px 5px 2px 1px;
+$colores: blue yellow  red green #FAFAFA rgb(100,100,50);
+@for $i from 6 through 1 {
+    .contenedor {
+        h#{$i}{
+            margin-top: list.nth($margen, $i);
+            background-color: list.nth($colores, $i);
+            @include comun_cabs($i);
+        }       
+    }
+}
+
+$numeros: 1 2 3;
+@each $i in $numeros {
+    h#{$i}{
+        color: black;
+    }
+}

@@ -1,0 +1,12 @@
+
+/* Ejemplo con el módulo meta */
+
+@use "sass:meta";
+
+$color: blue;
+$color2: #FAFAFA;
+$color3: rgb(255, 255, 255);
+
+@debug meta.type-of($color);
+@debug meta.type-of($color2);
+@debug meta.type-of($color3);

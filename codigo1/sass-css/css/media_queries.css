@@ -1,0 +1,13 @@
+/* Ejemplo con media queries */
+@media (min-width: 320px) and (max-width: 576px) {
+  .contenedor h1 {
+    color: red;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .contenedor h1 {
+    color: blue;
+  }
+}
+
+/*# sourceMappingURL=media_queries.css.map */
