@@ -1,0 +1,12 @@
+/* Definición de rutas 
+producción
+    img
+        galeria
+
+desarrollo
+    img
+        galeria
+*/
+.contenedor2 {
+  background-image: url('desarrollo/img/galeria/logo.png');
+}

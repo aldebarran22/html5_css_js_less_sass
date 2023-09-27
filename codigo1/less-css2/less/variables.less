@@ -1,0 +1,58 @@
+/* Variables y anidamiento en less */
+
+@size: 12px;
+@color: blue;
+
+div {
+    h1 {
+        font-size: @size * 2;
+        background-color:@color;
+    }
+}
+
+/* operaciones con variables */
+@numero1: 10;
+@numero2: 20;
+@numero3: 10px;
+@numero4: 20px;
+@numero5: 10rem;
+@numero6: 15%;
+@numero7: 15%;
+
+@suma: @numero1 + @numero2;
+@total: @numero3 * 2;
+
+h2 {
+    height: @suma;
+    width: @total;
+    // Da prioridad a las uds
+    // de la variable de la izq
+    // de la expresión
+    margin: @numero4+@numero5;
+
+    // Permite operaciones con %
+    margin-top: @numero6*2;
+    margin-bottom: @numero6+@numero7;
+    left: -1 * @numero6;
+    top: @numero4 + @numero7;
+    bottom: @numero7 + @numero4;
+}
+
+// las operaciones con % mejor
+// que SASS:
+@w: 25%;
+@h: 25%;
+
+.centrado {
+    position: absolute;
+    width: @w;
+    height: @h;
+    left: 50%;
+    top: 50%;
+    margin-top: -1 * (@w / 2);
+    margin-left: -1 * (@h / 2);
+    background-color: blue;
+}
+
+
+

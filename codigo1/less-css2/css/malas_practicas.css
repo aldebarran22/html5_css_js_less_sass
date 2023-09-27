@@ -1,0 +1,7 @@
+/* MALAS PRACTICAS */
+body nav {
+  background-color: #E3E3E3;
+}
+body nav ul li a {
+  color: orange;
+}

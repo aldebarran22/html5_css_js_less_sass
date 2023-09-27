@@ -1,0 +1,16 @@
+/* Anidaciones en less, quitar espacios en el elementos anidados */
+div {
+  color: red;
+}
+div.capa {
+  font-size: 12px;
+}
+nav {
+  background-color: #fff;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:HOVER {
+  text-decoration: underline;
+}

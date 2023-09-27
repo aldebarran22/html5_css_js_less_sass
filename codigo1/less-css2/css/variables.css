@@ -1,0 +1,26 @@
+/* Variables y anidamiento en less */
+div h1 {
+  font-size: 24px;
+  background-color: blue;
+}
+/* operaciones con variables */
+h2 {
+  height: 30;
+  width: 20px;
+  margin: 30px;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  left: -15%;
+  top: 35px;
+  bottom: 35%;
+}
+.centrado {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  left: 50%;
+  top: 50%;
+  margin-top: -12.5%;
+  margin-left: -12.5%;
+  background-color: blue;
+}
