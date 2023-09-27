@@ -1,0 +1,38 @@
+
+@use 'formatos';
+
+@mixin formatear($cab-unificada:true, $centrada:true, $totalizar:true){
+    @if $cab-unificada == true {
+        border-collapse: collapse; 
+
+        th {
+            background-color: formatos.$color_cab_fondo;
+            color: formatos.$color_cab_texto; 
+        }     
+    }
+
+    @if $centrada == true {
+        margin-left:auto;        
+        margin-right:auto;
+    }
+
+    @if $totalizar == true {
+
+        tr:last-child {
+            font-weight:bolder;
+        }
+
+        td:last-child {
+            font-weight:bolder;
+        }
+
+        tr:last-child td:last-child {
+            color: formatos.$color_totalizar; 
+        }
+    }
+}
+
+.tabla-formateada {
+    @include formatear($cab-unificada:false,$centrada:false);
+}
+    

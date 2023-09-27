@@ -1,0 +1,11 @@
+.tabla-formateada tr:last-child {
+  font-weight: bolder;
+}
+.tabla-formateada td:last-child {
+  font-weight: bolder;
+}
+.tabla-formateada tr:last-child td:last-child {
+  color: rgb(151, 7, 7);
+}
+
+/*# sourceMappingURL=tablas.css.map */
