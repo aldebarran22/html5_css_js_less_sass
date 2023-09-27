@@ -1,0 +1,130 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background: #B9CDEE;
+	font : 8pt Verdana, Geneva, Arial, Helvetica, sans-serif; 
+	color : #666666; 
+	margin : 20px 0px;
+	text-align: center;	
+}
+
+/* Capa principal, dentro de esta irán todas las áreas ... */
+div.contenedor {
+	text-align: center;
+	width: 600px;
+	background-color: #FFFFFF;
+	margin: auto;
+}
+
+div#datos {
+	height: 200px;
+	width: 600px;
+	text-align: center;
+	background-color: #5A8FCC;
+	margin: auto;
+}
+
+div#examen {
+	width: 600px;
+	text-align: center;
+	background-color: #5A8FCC;
+	visibility: hidden;
+	padding-top: 20px;
+}
+ 
+div#reloj {
+	width: 600px;
+	text-align: center;
+	background-color: #F7800A;
+	color: #FFFFFF;
+	font-weight: bold;	
+	border-bottom:1px solid #CCCCCC;
+	border-top:1px solid #CCCCCC;
+}
+ 
+h2 {
+	font : 10pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;	
+	padding: 0px 0px 0px 0px;	
+}
+ 
+h4 {
+	font : 8pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;	
+	text-align: justify;
+	padding: 15px 15px 15px 15px;
+} 
+
+input.campoForm {
+	width: 350px;
+	text-align: left;
+	color: #333333;
+	font : 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 0px;
+	border-bottom: 3.5px solid #444444;
+	border-right: 3.5px solid #444444;
+	margin-bottom: 20px;
+}
+
+div#campos {
+	width: 400px;
+	height: 180px;
+	text-align: left;
+	font : 10pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	font-weight: bold;	
+	float: left;
+}
+
+img#imagen {
+	width: 200px;
+	height: 180px;
+	float: right;
+	border: 0px;
+	background-color: #FFFFFF;
+	border: 2px solid #FFFFFF;
+	padding: 0px;
+	margin: 0px;
+	opacity: 0.4;
+}
+ 
+	
+input#comenzar {
+	align-text: center;
+	color: ##5A8FCC;
+	border-bottom: 3.5px solid #444444;
+	border-right: 3.5px solid #444444;
+	cursor: hand;
+	font-weight: bold;
+}
+
+div.bloque_pregunta {
+	padding: 0px 0px 5px 10px;
+}
+ 
+div.pregunta {
+	width: 500px;
+	border: 1.5px solid #F7800A;
+	text-align: left;
+	color: #BBBBBB;
+	font-weight: bold;
+}
+
+label.titulo_pregunta {
+	width: 500px;
+	color: #FFFFFF;
+	background-color: #F7800A;
+	font-weight: bold;
+	text-align: text;
+	font : 9pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 0px 0px 0px 3px;
+}
+
+form { padding: 25px; width: 250px; } 
+.etiqueta_form { font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #FFF; display: block; } 
+
+
+
+		
