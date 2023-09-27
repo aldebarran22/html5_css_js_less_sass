@@ -1,0 +1,9 @@
+@ancho_fixed : (@columnas * @ancho_columnas) + (@columnas * @ancho_margen) * 1px;
+
+@ancho_total : @ancho_fixed; //también puede ser : 100%;
+
+
+.columnas(@ocupa) {
+	width: @ancho_total * ((((@ancho_columnas + @ancho_margen) * @ocupa) - @ancho_margen) / @ancho_fixed);
+	margin: 0 (@ancho_total * ((@ancho_margen * .5) / @ancho_fixed));
+}

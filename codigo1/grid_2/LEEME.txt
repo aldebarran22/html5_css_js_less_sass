@@ -1,0 +1,12 @@
+El parámetro que recibe el mixin columnas
+significa cuantas columnas ocupa cada span
+Se supone que el grid es de 12 cols (en total)
+
+Colocar 3 span en el index
+columnas(1)
+columnas(4) --> cada span ocupa 4 cols
+debería de llenar la fila entera.
+
+poner dos span y 6 cols
+ocupará toda la linea con 2 span
+
