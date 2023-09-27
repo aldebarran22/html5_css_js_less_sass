@@ -1,0 +1,9 @@
+span {
+  width: 220px;
+  margin: 0 10px;
+  display: block;
+  height: 50px;
+  float: left;
+  background-color: grey;
+  border: 1px solid black;
+}

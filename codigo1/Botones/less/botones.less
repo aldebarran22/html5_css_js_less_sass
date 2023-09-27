@@ -1,0 +1,26 @@
+.boton(@tipo : @botonbg) {
+	
+	.vertical(@tipo, darken(@tipo, 10));
+
+	//Borde
+	border: 1px solid @botonborde;
+	.border-radius(@botonradio);
+
+	//Texto
+	color: white;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+
+	//Layout
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	height: 32px;
+	line-height: 32px;
+	padding: 0px 25.6px;
+	font-weight: 300;
+	font-size: 14px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	margin: 0;
+	text-decoration: none;
+	text-align: center;
+}

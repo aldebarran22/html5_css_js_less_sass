@@ -1,0 +1,17 @@
+.vertical(@desde : @basecolor, @hasta : @compcolor) {
+	//Gradiente
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fa9915), color-stop(100%, #d87e04));
+	background: -webkit-linear-gradient(top, @desde, @hasta);
+	background: -moz-linear-gradient(top, @desde, @hasta);
+	background: -o-linear-gradient(top, @desde, @hasta);
+	background: linear-gradient(top, @desde, @hasta);
+	background-color: @desde;
+}
+
+.border-radius(@radius : 4px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
