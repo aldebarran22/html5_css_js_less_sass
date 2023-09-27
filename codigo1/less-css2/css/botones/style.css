@@ -1,0 +1,24 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  background: linear-gradient(to left top, #da4f49, #731b17);
+  background-color: #da4f49;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #2d636a;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0 2rem;
+  cursor: pointer;
+}

@@ -1,0 +1,45 @@
+
+// Mixins de uso general
+.vertical(@desde: @basecolor, @hasta: @compcolor){
+    // Genera un degradado vertical tomando como color origen: desde
+    // y terminando en el color: hasta
+    background: linear-gradient(to left top, @desde, @hasta);
+
+    // Si el navegador no entiende la función linear-grandient
+    // coloca un color fijo de fondo.
+    background-color: @desde;
+}
+
+.border-radius(@radius : 4px) {
+    // Indica la propiedad border-radius en todos
+    // navegadores:
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.boton(@tipo: @botonbg){
+
+    // Degradado: color de inicio y final:
+    .vertical(@tipo, darken(@tipo, 30));
+
+    // Borde del boton
+    .border-radius(@botonradio);
+    border: 1px solid @botonborde;
+
+    // Color del texto:
+    color: @botoncolor;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.35);
+
+    // Layout:
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    height:25px;
+    list-style: none;
+    vertical-align: middle;
+    padding:0 2rem;
+    cursor: pointer;
+}

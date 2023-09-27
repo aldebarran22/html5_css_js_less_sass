@@ -1,0 +1,17 @@
+/* Pruebas con colores*/
+
+@naranja: orange;
+@porcentaje: 20%;
+
+@color_titulo: darken(@naranja, @porcentaje);
+
+h1 {
+    color: @color_titulo;
+    // Invertir el color:
+    background-color: spin(@naranja, 180);
+}
+
+h2 {
+    color: lighten(@color_titulo,20);
+    background-color: @naranja*2;
+}
