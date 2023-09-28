@@ -7,6 +7,7 @@ let opciones = new Map([
   ["col-3", 4],
   ["col-2", 6],
 ]);
+const clasePorDefecto = "col-4";
 
 const cargaCombo = (combo) => {
   let opcion;
@@ -25,12 +26,9 @@ const procesar = (memes) => {
   let figure, figureCap;
   let titulo;
 
-  //capa.innerHTML = `<h1>Memes(${memes.length})</h1>`;
-  //capa.appendChild(crearCombo());
-
   for (let meme of memes) {
     capaImg = document.createElement("div");
-    capaImg.className = "col-4";
+    capaImg.className = clasePorDefecto;
     figure = document.createElement("figure");
     figureCap = document.createElement("figcaption");
     titulo =
@@ -66,6 +64,9 @@ const getMemes = () => {
 window.onload = () => {
   capa = document.querySelector("#contenedor");
   let combo = document.getElementById("numMemes");
+  cargaCombo(combo);
+  combo.selectedIndex = opciones.get(clasePorDefecto) - 1;
+
   combo.addEventListener("change", () => {
     let nombreClase = combo.options[combo.selectedIndex].value;
     let capasImg = document.querySelectorAll("#contenedor div");
@@ -75,6 +76,5 @@ window.onload = () => {
       }
     }
   });
-  cargaCombo(combo);
   getMemes();
 };
