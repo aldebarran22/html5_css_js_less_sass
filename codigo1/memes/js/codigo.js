@@ -3,12 +3,26 @@ let capa;
 
 const procesar = (memes) => {
   let parrafo;
+  let img;
+  let capaImg;
+  let figure, figureCap;
+
   capa.innerHTML = `<h1>Memes(${memes.length})</h1>`;
 
   for (let meme of memes) {
-    parrafo = document.createElement("p");
-    parrafo.appendChild(document.createTextNode(meme.name));
-    capa.appendChild(parrafo);
+    capaImg = document.createElement("div");
+    figure = document.createElement("figure");
+    figureCap = document.createElement("figcaption");
+    figureCap.appendChild(document.createTextNode(meme.name));
+
+    img = new Image(150);
+    img.src = meme.url;
+    img.alt = meme.url;
+
+    figure.appendChild(img);
+    figure.appendChild(figureCap);
+    capaImg.appendChild(figure);
+    capa.appendChild(capaImg);
   }
 };
 
