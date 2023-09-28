@@ -6,16 +6,21 @@ const procesar = (memes) => {
   let img;
   let capaImg;
   let figure, figureCap;
+  let titulo;
 
   capa.innerHTML = `<h1>Memes(${memes.length})</h1>`;
 
   for (let meme of memes) {
     capaImg = document.createElement("div");
+    capaImg.className = "col-3";
     figure = document.createElement("figure");
     figureCap = document.createElement("figcaption");
-    figureCap.appendChild(document.createTextNode(meme.name));
+    titulo =
+      meme.name.length > 15 ? meme.name.substring(0, 15) + "..." : meme.name;
+    figureCap.appendChild(document.createTextNode(titulo));
 
-    img = new Image(150);
+    img = new Image();
+    img.height = 100;
     img.src = meme.url;
     img.alt = meme.url;
 
