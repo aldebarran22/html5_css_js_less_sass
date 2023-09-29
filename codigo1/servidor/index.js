@@ -10,10 +10,25 @@ const wss = new WebSocket.Server({ server });
 // Eventos de la conexión
 wss.on("connection", (socket) => {
   // Eventos entrantes
-  console.log("hay una conexión: ");
+  console.log("hay una conexión:");
+  //console.log("Address: ", socket._socket.address());
+  //console.log("remoteAddress: ", socket._socket.remoteAddress);
+  //console.log("remotePort: ", socket._socket.remotePort);
+  console.log("clientes conectados: ", wss.clients.size);
+
+  // Saludar a todos los clientes:
+  wss.clients.forEach((cliente) => {
+    if (cliente.readyState === WebSocket.OPEN) {
+      cliente.send(
+        "Se ha conectado otro al grupo: ",
+        cliente._socket.remotePort
+      );
+    }
+  });
 
   socket.on("message", (data) => {
     console.log("mensaje recibido: " + data.toString());
+
     socket.send("server: " + data.toString());
   });
 
