@@ -1,0 +1,13 @@
+
+@lista : {h1:red; h3:blue; h4: green; h5: yellow};
+@oscurecer:false;
+@margen: 0.2;
+@padding: 1.5rem;
+
+each(@lista, {
+    @{key}{
+        color:if((@oscurecer), darken(@value, 20), @value);
+        margin: percentage(@margen);
+        padding: if((ispixel(@padding)), @padding*2, @padding);
+    }
+});
