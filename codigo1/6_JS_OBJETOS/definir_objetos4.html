@@ -1,0 +1,26 @@
+<html>
+
+<head>
+	<script>
+		var texto="{'persona':{'nombre':'Eva','apellidos':'Perez','telefonos':[{'tipo':'casa','numero':'9696959559'},{'tipo':'movil','numero':'600231654'}]}}";
+		
+		window.addEventListener("load",function(){
+				var obj = eval( "(" + texto + ")" );
+				document.write("<br/>NOMBRE:"+obj.persona.nombre);
+				document.write("<br/>APELLIDOS:"+obj.persona.apellidos);
+				document.write("<br/>telefonos:"+obj.persona.telefonos.length);
+				
+				for (i = 0 ; i < obj.persona.telefonos.length ; i++){
+						document.write("<br />"+obj.persona.telefonos[i].tipo + " -> " + obj.persona.telefonos[i].numero);
+					
+				}	
+		}, false);
+		
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

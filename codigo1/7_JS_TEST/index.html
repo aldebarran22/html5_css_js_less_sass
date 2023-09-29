@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>TEST DE CERTIFICACION DE JAVA</title>
+	<link rel="STYLESHEET" type="text/css" href="estilos.css" />
+	<script type="text/javascript" src="funciones.js"></script>
+</head>
+
+<body>
+	<div class="contenedor">		
+		<div id="datos">			
+			<div id="campos">
+				<form action="">
+					<div><label class="etiqueta_form" for="dni">DNI:</label></div>
+					<div><input type="text" id="dni" name="dni" class="campoForm"/></div>
+					<div><label class="etiqueta_form" for="nombre">NOMBRE COMPLETO:</label></div>
+					<div><input type="text" id="nombre" name="nombre" class="campoForm" /></div>							
+					<div><input type="button" id="comenzar" name="comenzar" value="Comenzar Test" onclick="valida()" /></div>
+				</form>
+			</div>	
+			<div id="imagen"><img src="logo_java.PNG" alt="java" /></div>							
+		</div>			
+		<div id="reloj">
+			<label>Su tiempo restante es: 00:00:30</label>
+		</div>		
+		<div id="examen">		
+			<div class="pregunta">
+				<label class="titulo_pregunta">1. Indica cual de esta palabras no es de java</label>				
+				<div class="bloque_pregunta">
+					<p><input type="radio" id="A1" name="1" value="1A" onclick="anotar(this)" />A. break</p>
+					<p><input type="radio" id="B1" name="1" value="1B" onclick="anotar(this)" /> B. continue</p>
+					<p><input type="radio" id="C1" name="1" value="1C" onclick="anotar(this)" /> C. dim</p>
+					<p><input type="radio" id="D1" name="1" value="1D" onclick="anotar(this)" /> D. for</p>
+					<p><input type="radio" id="E1" name="1" value="1E" onclick="anotar(this)" /> E. while</p>
+				</div>							
+			</div>
+			
+			<br />
+			
+			<div class="pregunta">
+				<label class="titulo_pregunta">2. Cual es el orden correcto de menor a mayor restricción en los modificadores</label>
+				
+				<div class="bloque_pregunta">
+					<p><input type="radio" id="A2" name="2" value="2A" onclick="anotar(this)" />A. private, default, protected, public.</p>
+					<p><input type="radio" id="B2" name="2" value="2B" onclick="anotar(this)" />B. public, protected, default, private.</p>
+					<p><input type="radio" id="C2" name="2" value="2C" onclick="anotar(this)" />C. public, default, protected, private.</p>
+				</div>
+			</div>
+			
+			<br />
+			
+			<div class="pregunta">
+				<label class="titulo_pregunta">3. Se puede heredar de la clase Math </label>
+				
+				<div class="bloque_pregunta">
+					<p><input type="radio" id="A3" name="3" value="3A" onclick="anotar(this)" /> A. Verdadero</p>
+					<p><input type="radio" id="B3" name="3" value="3B" onclick="anotar(this)" /> B. Falso</p>
+				</div>
+			</div>
+			
+			<br />
+			
+			<div class="pregunta">
+				<label class="titulo_pregunta">4. Indicar la definición correcta de main() </label>
+				
+				<div class="bloque_pregunta">
+					<p><input type="radio" id="A4" name="4" value="4A" onclick="anotar(this)" /> A. public static int main()</p>
+					<p><input type="radio" id="B4" name="4" value="4B" onclick="anotar(this)" /> B. public static void main(String args[])</p>
+					<p><input type="radio" id="C4" name="4" value="4C" onclick="anotar(this)" /> C. public static int main(String args[])</p>
+					<p><input type="radio" id="D4" name="4" value="4D" onclick="anotar(this)" /> D. private static void main(String args[])</p>
+				</div>
+			</div>
+			<br />
+
+		</div>		
+	
+	</div>
+</body>
+</html>

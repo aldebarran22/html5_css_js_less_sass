@@ -1,0 +1,10 @@
+
+input:required:invalid, input:focus:invalid {
+    /* Hay un error en el campo*/
+    background-color:rgb(220, 56, 56);
+}
+
+input:required:valid {
+    /* El valor es correcto */
+    background-color:rgb(88, 202, 88);
+}
