@@ -8,22 +8,24 @@ const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
 // Eventos de la conexión
-wss.on("connection", () => {
+wss.on("connection", (socket) => {
   // Eventos entrantes
   console.log("hay una conexión");
 
-  wss.on("message", (data) => {
+  socket.on("message", (data) => {
     // Iterar por los clientes:
     console.log("mensaje recibido: " + data.toString());
+    socket.send("server: " + data.toString());
+    /*
     wss.clients.forEach((cliente) => {
       if (cliente.readyState === WebSocket.OPEN) {
         // Le enviamos lo mismo que hemos recibido
         console.log("enviar mensaje al cliente: " + data.toString());
         cliente.send(data.toString());
       }
-    });
+    });*/
   });
 });
 
-server.listen(8080);
+server.listen(8081);
 console.log("Servidor ok!");
