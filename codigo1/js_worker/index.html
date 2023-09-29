@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label for="Mensaje">Mensaje</label>
+        <input type="text" id="mensaje" name="mensaje" placeholder="un mensaje">
+        <button type="button" id="boton">Enviar</button>
+        <button type="button" id="boton2" name="boton2">Terminar</button>
+    </form>
+    <h3>Mensajes recibidos</h3>
+    <div id="contenedor"></div>
+
+    <script type="text/javascript">
+        let capa = document.getElementById("contenedor")
+        capa.innerHTML = "";
+
+        // Crear el worker:
+        w = new Worker("./js/worker.js")
+        w.onmessage = (e) => {
+            // Recibir los mensajes
+            capa.innerHTML += e.data + "<br>"
+        }
+        let boton = document.querySelector("#boton")
+        boton.addEventListener('click', () => {
+            let texto = document.querySelector("#mensaje")
+            w.postMessage(texto.value)
+            texto.value = ""
+        })
+        let boton2 = document.querySelector("#boton")
+        boton.addEventListener('click', () => {
+            w.terminate()
+        })
+
+    </script>
+</body>
+
+</html>
