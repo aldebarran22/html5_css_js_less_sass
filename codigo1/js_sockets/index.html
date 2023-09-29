@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="nuevo-mensaje">Nuevo Mensaje</label>
+    <input type="text" id="nuevo-mensaje" name="nuevo-mensaje">
+
+    <!-- Los  mensajes recibidos-->
+    <div id="respuestas"></div>
+
+    <script>
+        // Capturar controles:
+        let capa = document.getElementById("respuestas");
+        let nuevoMensaje = capa.getElementsById('nuevo-mensaje');
+        nuevoMensaje.addEventListener("keypress", (e) => {
+            if (e.code === 'Enter') {
+                socket.send(nuevoMensaje.value)
+                nuevoMensaje.value = ""
+            }
+        })
+
+        // Crear el Web Socket:
+        let socket = new WebSocket("ws://localhost:8080")
+
+        // definir 4 eventos: open, message, error, close
+        socket.addEventListener("open", () => {
+            console.log('Socket open!!')
+        })
+        socket.addEventListener("message", async (e) => {
+            console.log('recibimos mensaje')
+            const mensaje = await evento.data
+            capa.innerHTML += mensaje + "<br>"
+        })
+
+        socket.addEventListener("error", (e) => {
+            console.error("Error: " + e)
+        })
+        socket.addEventListener("close", () => {
+            console.log('Conexión cerrada')
+        })
+
+    </script>
+</body>
+
+</html>
