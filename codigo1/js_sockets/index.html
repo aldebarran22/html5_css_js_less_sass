@@ -17,16 +17,19 @@
     <script>
         // Capturar controles:
         let capa = document.getElementById("respuestas");
-        let nuevoMensaje = capa.getElementsById('nuevo-mensaje');
+        let nuevoMensaje = document.getElementById('nuevo-mensaje');
+
         nuevoMensaje.addEventListener("keypress", (e) => {
+
             if (e.code === 'Enter') {
+                console.log('Enviar mensaje')
                 socket.send(nuevoMensaje.value)
                 nuevoMensaje.value = ""
             }
         })
 
         // Crear el Web Socket:
-        let socket = new WebSocket("ws://localhost:8080")
+        let socket = new WebSocket("ws://localhost:8081")
 
         // definir 4 eventos: open, message, error, close
         socket.addEventListener("open", () => {
@@ -34,7 +37,7 @@
         })
         socket.addEventListener("message", async (e) => {
             console.log('recibimos mensaje')
-            const mensaje = await evento.data
+            const mensaje = await e.data
             capa.innerHTML += mensaje + "<br>"
         })
 
