@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="./js/codigo.js"></script>
+</head>
+
+<body>
+	<div id="contenedor">
+		<p>SELECCIONAR EL NOMBRE DEL FICHERO</p>
+		<p>
+			<label for="selector">Fichero</label>
+			<select id="selector" name="selector">
+				<option value="./fichero1.txt">fichero1.txt</option>
+				<option value="./fichero2.txt">fichero2.txt</option>
+				<option value="./fichero3.txt">fichero3.txt</option>
+			</select>
+		</p>
+		<div><input type="button" id="cambia" value="cambia" onclick="solicitarTexto()"></input></div>
+		<div id="contenidoTexto"></div>
+	</div>
+</body>
+
+</html>
