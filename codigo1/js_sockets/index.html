@@ -10,6 +10,8 @@
 <body>
     <label for="nuevo-mensaje">Nuevo Mensaje</label>
     <input type="text" id="nuevo-mensaje" name="nuevo-mensaje">
+    <button type="button" id="conectar" name="conectar">Conectar</button>
+    <button type="button" id="desconectar" name="desconectar">Desconectar</button>
 
     <!-- Los  mensajes recibidos-->
     <div id="respuestas"></div>
@@ -18,35 +20,48 @@
         // Capturar controles:
         let capa = document.getElementById("respuestas");
         let nuevoMensaje = document.getElementById('nuevo-mensaje');
-
         nuevoMensaje.addEventListener("keypress", (e) => {
-
             if (e.code === 'Enter') {
-                console.log('Enviar mensaje')
-                socket.send(nuevoMensaje.value)
-                nuevoMensaje.value = ""
+
+                if (socket != null && socket.readyState !== WebSocket.CLOSED) {
+                    console.log('Enviar mensaje')
+                    socket.send(nuevoMensaje.value)
+                    nuevoMensaje.value = ""
+                } else {
+                    alert('No está conectado al servidor')
+                }
             }
         })
 
-        // Crear el Web Socket:
-        let socket = new WebSocket("ws://localhost:8081")
+        let socket = null;
+        let botonConectar = document.getElementById("conectar")
+        botonConectar.addEventListener("click", (e) => {
+            // Crear el Web Socket:
+            socket = new WebSocket("ws://localhost:8081")
 
-        // definir 4 eventos: open, message, error, close
-        socket.addEventListener("open", () => {
-            console.log('Socket open!!')
+            // definir 4 eventos: open, message, error, close
+            socket.addEventListener("open", () => {
+                console.log('Socket open!!')
+            })
+            socket.addEventListener("message", async (e) => {
+                console.log('recibimos mensaje')
+                const mensaje = await e.data
+                capa.innerHTML += mensaje + "<br>"
+            })
+            socket.addEventListener("error", (e) => {
+                console.error("Error: " + e)
+            })
+            socket.addEventListener("close", () => {
+                console.log('Conexión cerrada')
+            })
         })
-        socket.addEventListener("message", async (e) => {
-            console.log('recibimos mensaje')
-            const mensaje = await e.data
-            capa.innerHTML += mensaje + "<br>"
+        let botonDesconectar = document.getElementById("desconectar")
+        botonDesconectar.addEventListener("click", () => {
+            console.log("Cerramos la conexión")
+            socket.close();
         })
 
-        socket.addEventListener("error", (e) => {
-            console.error("Error: " + e)
-        })
-        socket.addEventListener("close", () => {
-            console.log('Conexión cerrada')
-        })
+
 
     </script>
 </body>

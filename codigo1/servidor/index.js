@@ -10,13 +10,19 @@ const wss = new WebSocket.Server({ server });
 // Eventos de la conexión
 wss.on("connection", (socket) => {
   // Eventos entrantes
-  console.log("hay una conexión");
+  console.log("hay una conexión: ");
 
   socket.on("message", (data) => {
-    // Iterar por los clientes:
     console.log("mensaje recibido: " + data.toString());
     socket.send("server: " + data.toString());
-    /*
+  });
+
+  // Se desconecta un cliente:
+  socket.on("close", () => {
+    console.log("Cliente desconectado ...");
+  });
+
+  /*
     wss.clients.forEach((cliente) => {
       if (cliente.readyState === WebSocket.OPEN) {
         // Le enviamos lo mismo que hemos recibido
@@ -24,7 +30,6 @@ wss.on("connection", (socket) => {
         cliente.send(data.toString());
       }
     });*/
-  });
 });
 
 server.listen(8081);
