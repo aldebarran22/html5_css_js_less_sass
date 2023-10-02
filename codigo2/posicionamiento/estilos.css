@@ -1,0 +1,32 @@
+#contenedor {
+    width:700px; /* 80% */
+    margin:10px auto;     
+    border: 1px solid grey;
+    background-color: #efefef;
+    height:100px;
+}
+
+main  {
+    height: 200px;
+}
+
+section {
+    float:left;
+    width: 500px;
+}
+
+aside {
+    float: right;
+    width: 190px;
+}
+.clear {
+    clear: both;
+}
+
+footer {
+    width: 100%;
+    background-color:orange;
+    color:black;
+    text-align:center;
+    height:50px;
+}
