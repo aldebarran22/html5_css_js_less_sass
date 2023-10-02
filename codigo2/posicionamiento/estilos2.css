@@ -1,0 +1,21 @@
+
+.contenedor {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.izq {
+    float:left;
+    width: 45%;    
+    border: 1px solid grey;
+
+}
+
+.der {
+    float: right;
+    width: 45%;
+}
+
+.clear {
+    clear: both;
+}
