@@ -1,3 +1,15 @@
+.menu-vertical {
+    height: 200px;
+}
+
+.menu-vertical li {
+    list-style: none;
+    border: 1px solid grey;
+    width:100px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
 .menu-horizontal {
     width: 75%;
     margin: 0px auto;
@@ -12,14 +24,18 @@
     border-radius: 5px;
 }
 
-.menu-horizontal li a {
+.menu-vertical li a {
+    display: block;
+}
+
+.menu-horizontal li a, .menu-vertical li a {
     text-decoration: none;
     color:black;
     padding: 2px 10px;
     border-radius: 5px;
 }
 
-.menu-horizontal li a:HOVER {
+.menu-horizontal li a:HOVER, .menu-vertical li a:HOVER {
     background-color: orangered;
 }
 
