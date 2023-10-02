@@ -1,0 +1,9 @@
+#contenedor {
+    width:200px;
+    border: 10px solid black;
+    padding: 30px;
+    background-color: grey;
+    color:red;
+    box-sizing: border-box; /* padding y border se incluye en el width*/
+    
+}
