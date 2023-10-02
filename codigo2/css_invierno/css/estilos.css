@@ -1,0 +1,24 @@
+/* */
+
+#contenedor {
+    width: 700px;
+    margin:10px auto;     
+    border: 1px solid grey;
+}
+
+a {
+    text-decoration: none;    
+}
+
+a:HOVER {
+    text-decoration: underline;
+}
+
+header a {
+    color: rgb(62, 62, 220);
+}
+
+footer a {
+    color: grey;
+}
+
