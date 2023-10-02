@@ -35,8 +35,10 @@ header a {
     color: rgb(62, 62, 220);    
 }
 
-main {
-    display: flex;
+@media (min-width: 576px) {
+    main {
+        display: flex;
+    }
 }
 
 section {

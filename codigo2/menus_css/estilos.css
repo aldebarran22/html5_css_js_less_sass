@@ -1,10 +1,17 @@
+:root {
+    --color-seleccionado: rgb(64, 221, 64);
+    --color-texto: black;
+    --color-borde: rgb(199, 199, 244);
+    --altura: 300px;
+}
+
 .menu-vertical {
-    height: 200px;
+    height: var(--altura);
 }
 
 .menu-vertical li {
     list-style: none;
-    border: 1px solid grey;
+    border: 1px solid var(--color-borde);
     width:100px;
     border-radius: 5px;
     margin-bottom: 3px;
@@ -19,7 +26,7 @@
 .menu-horizontal li {
     list-style: none;
     display: inline;
-    border: 1px solid grey;
+    border: 1px solid var(--color-borde);
     width:100px;
     border-radius: 5px;
 }
@@ -30,13 +37,19 @@
 
 .menu-horizontal li a, .menu-vertical li a {
     text-decoration: none;
-    color:black;
+    color:var(--color-texto);
     padding: 2px 10px;
     border-radius: 5px;
 }
 
 .menu-horizontal li a:HOVER, .menu-vertical li a:HOVER {
-    background-color: orangered;
+    background-color: var(--color-seleccionado);
+}
+
+.estilo-logo {
+    border:0;
+    width:88px;
+    height:31px
 }
 
 

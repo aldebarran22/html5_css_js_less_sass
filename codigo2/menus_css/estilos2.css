@@ -1,0 +1,15 @@
+
+@media (max-width: 768px){
+
+    .contenedor p{
+        color: red;
+    }
+}
+
+@media (min-width: 768px){
+
+    .contenedor p {
+        display:inline;
+        color: blue;
+    }
+}
