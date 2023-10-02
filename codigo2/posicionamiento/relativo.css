@@ -1,0 +1,33 @@
+
+.box {
+    display: inline-block;
+    width: 100px; 
+    height: 100px;
+    background-color:red;
+    color: #fff;
+}
+
+#especial {
+    position: absolute;
+    bottom:0px;
+    left:20px;
+    background-color:blue;
+}
+
+.contenedor {
+    width:200px;
+    overflow:auto;
+    height:300px;
+    margin:60px;
+    text-align: left;
+}
+
+.caja {  
+    position: fixed;  /* Probar a quitar esta propiedad */
+    width:150px;
+    height: 50px;
+    background-color:green;
+    top: 150px;
+    left: 70px;
+    opacity: 0.8;
+}

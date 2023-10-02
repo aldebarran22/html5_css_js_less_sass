@@ -7,7 +7,7 @@ body {
 }
 
 #contenedor {
-    width: 700px;
+    width:700px; /* 80% */
     margin:10px auto;     
     border: 1px solid grey;
     background-color: #efefef;
@@ -21,8 +21,14 @@ a:HOVER {
     text-decoration: underline;
 }
 
+header img {
+    width:100%;
+}
+
 header nav {
-    padding-left: 3px;;
+    padding-left: 3px;
+    background-image: url("../img/fondonav.gif");
+    background-repeat: repeat-x;
 }
 
 header a {
@@ -35,6 +41,7 @@ main {
 
 section {
     padding:5px;
+    text-align: justify;
 }
 
 aside {
