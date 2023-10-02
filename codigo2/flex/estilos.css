@@ -1,0 +1,50 @@
+
+.contenedor {
+    height: 200px;
+    width:50%;
+    border:1px solid red;
+    margin: 20px auto;
+}
+
+p {
+    margin: 0 5px;
+    border: 1px solid black;
+}
+
+.flex1 {
+    display: flex; /* se colocan en horizontal*/
+    justify-content:center; /* Centrado horizontalmente */
+    align-items: center;  /* Centrado en vertical */
+}
+
+.flex2 {
+    display: flex; /* se colocan en horizontal*/
+    justify-content:space-around; /* Centrado horizontalmente */
+    align-items: center;  /* Centrado en vertical */
+}
+
+.flex3 {
+    display: flex; /* se colocan en horizontal*/
+    justify-content:space-around; /* Centrado horizontalmente */
+    align-items: center;  /* Centrado en vertical */
+    flex-wrap: wrap;
+}
+
+.contenedor-centrado {
+    display: flex;
+    justify-content:center;
+    height:100vh; /* 100% en altura -> viewport height */
+    align-items: center;
+}
+
+.contenedor-centrado div {
+    margin: 0px auto;
+    width: 25%;
+    height: 25%;
+    background-color: blue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
