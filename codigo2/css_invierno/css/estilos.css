@@ -1,9 +1,16 @@
 /* */
 
+body {
+    font-family:Tahoma, Verdana, Arial;
+    font-size: 12px;
+    background-image:url('../img/fondo.gif')
+}
+
 #contenedor {
     width: 700px;
     margin:10px auto;     
     border: 1px solid grey;
+    background-color: #efefef;
 }
 
 a {
@@ -14,8 +21,30 @@ a:HOVER {
     text-decoration: underline;
 }
 
+header nav {
+    padding-left: 3px;;
+}
+
 header a {
-    color: rgb(62, 62, 220);
+    color: rgb(62, 62, 220);    
+}
+
+main {
+    display: flex;
+}
+
+section {
+    padding:5px;
+}
+
+aside {
+    border: 1px solid grey;
+    padding:5px;
+}
+
+aside ul li {
+    list-style: none;
+    list-style-image: url('../img/bullet.gif');
 }
 
 footer a {
