@@ -1,0 +1,29 @@
+/*Estilos SASS*/
+@media (max-width: 768px) {
+  main section {
+    width: 100%;
+    float: left;
+  }
+  main aside {
+    width: 100%;
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  main section {
+    width: 50%;
+    float: left;
+  }
+  main aside {
+    width: 50%;
+    float: right;
+  }
+}
+
+footer {
+  float: left;
+  width: 100%;
+  /* clear: both; */
+}
+
+/*# sourceMappingURL=estilos2.css.map */

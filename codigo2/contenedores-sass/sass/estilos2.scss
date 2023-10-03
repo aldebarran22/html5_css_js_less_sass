@@ -1,0 +1,37 @@
+/*Estilos SASS*/
+
+// @use 'modulos/dimensiones'; // ancho: 768px 
+
+// Modificar el ancho a 576px
+@use 'modulos/dimensiones' with (
+    $limite_width:768px
+);
+
+@mixin dimensionar($ancho){
+
+    section {
+        width: $ancho;
+        float:left;
+    }
+    aside {
+        width: $ancho;
+        float: right;
+    }
+}
+
+main {
+    @media (max-width: dimensiones.$limite_width) {
+        // Para teléfonos
+        @include dimensionar(100%);
+    }
+
+    @media (min-width: dimensiones.$limite_width) {
+        @include dimensionar(50%);        
+    }
+}
+
+footer {
+   float: left;
+   width: 100%;
+   /* clear: both; */
+}
