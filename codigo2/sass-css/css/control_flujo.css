@@ -1,0 +1,62 @@
+/* Ejemplos de control de flujo en SASS */
+h6 {
+  font-size: 48px;
+  color: red;
+}
+
+h5 {
+  font-size: 40px;
+  color: red;
+}
+
+h4 {
+  font-size: 32px;
+  color: red;
+}
+
+h3 {
+  font-size: 24px;
+  color: red;
+}
+
+h2 {
+  font-size: 16px;
+  color: red;
+}
+
+h1 {
+  font-size: 8px;
+  color: red;
+}
+
+.contenedor h1 {
+  margin: 0px 30px;
+  color: blue;
+}
+
+.contenedor h2 {
+  margin: 0px 20px;
+  color: yellow;
+}
+
+.contenedor h3 {
+  margin: 0px 10px;
+  color: #fff;
+}
+
+.contenedor h4 {
+  margin: 0px 5px;
+  color: #c0c0c0;
+}
+
+.contenedor h5 {
+  margin: 0px 2px;
+  color: rgb(12, 45, 66);
+}
+
+.contenedor h6 {
+  margin: 0px 1px;
+  color: rgba(34, 6, 11, 0.5);
+}
+
+/*# sourceMappingURL=control_flujo.css.map */

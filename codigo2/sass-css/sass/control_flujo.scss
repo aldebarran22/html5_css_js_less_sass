@@ -1,0 +1,27 @@
+/* Ejemplos de control de flujo en SASS */
+
+@use 'sass:list';
+
+$fontSize: 8px;
+
+@for $i from 6 through 1 {
+
+    h#{$i}{
+        font-size: $fontSize * $i;
+        color: red;
+    }
+}
+
+// Un ejemplo con listas:
+$margen: 30px 20px 10px 5px 2px 1px; // lista empiezan en 1
+$colores: blue yellow #fff #c0c0c0 rgb(12,45,66) rgba(34,6,11,0.5);
+@for $i from 1 through 6 {
+    .contenedor {
+
+        h#{$i}{
+            margin: 0px list.nth($margen, $i); // Seleccionar el elemento $i de la lista $margen
+            color: list.nth($colores, $i);
+        }
+    }
+}
+

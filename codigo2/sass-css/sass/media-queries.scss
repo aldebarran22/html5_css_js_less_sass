@@ -1,0 +1,29 @@
+/* Ejemplo con media queries */
+
+.contenedor {
+
+    @media(min-width: 320px ) and (max-width:576px){
+        $color: red;
+
+        h1 {
+            color:$color;
+        }
+    }
+
+    @media (min-width:576px) and (max-width:768px){
+        $color: blue;
+
+        h2 {
+            color: $color;
+        }
+    }
+}
+
+$rango-min: 768px;
+$rango-max: 1200px;
+.contenedor2 {
+    @media (min-width:$rango-min) and (max-width:$rango-max) {
+        height: 200px;
+        width:400px
+    }
+}
