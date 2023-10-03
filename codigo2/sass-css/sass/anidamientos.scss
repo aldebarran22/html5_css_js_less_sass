@@ -1,0 +1,19 @@
+$color-texto: green;
+
+div { 
+    width: 50%;
+
+    h1 {
+        color: $color_texto;
+    }       
+    
+    nav {
+
+        height: 50px;
+
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+    }
+}

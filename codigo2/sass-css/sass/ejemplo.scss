@@ -1,0 +1,16 @@
+
+/* Comentario de CSS, se transfieren al documento CSS */
+
+$color-texto: #fff;
+$color-fondo: rgb(25, 25, 231);
+
+h1 {
+    // Comentarios de propios de SASS
+    color: $color-texto;
+    background-color: $color-fondo;
+}
+
+h2 {
+    color: $color-texto;
+}
+

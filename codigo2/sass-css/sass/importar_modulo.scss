@@ -1,0 +1,15 @@
+
+@use 'modulos/variables' with (
+    $color_borde: grey
+);
+
+.contenedor {
+    width: variables.$width;
+    height: variables.$height;
+    border: variables.$ancho_borde solid variables.$color_borde;
+}
+
+
+h1 {
+    border: variables.$ancho_borde solid black;
+}

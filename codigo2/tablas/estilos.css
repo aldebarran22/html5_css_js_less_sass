@@ -12,3 +12,38 @@
 .bordes tr td {
     border: 1px solid black;
 }
+
+.cab-unificada {
+    border-collapse: collapse;
+}
+
+.cab-unificada th, .cab-unificada td {
+    border: none;
+}
+
+.cab-unificada th {
+    background-color: #000;
+    color: #fff;
+}
+
+.rayada tr:nth-of-type(even){
+    background-color: #fff;
+}
+
+.rayada tr:nth-of-type(odd){
+    background-color: #aaa;
+}
+
+.totalizar tr:last-child {
+    font-weight: bolder;
+}
+
+.totalizar td:last-child {
+    font-weight: bolder;
+}
+
+.totalizar tr:last-child td:last-child {
+    color: red;
+    font-weight: bolder;
+}
+

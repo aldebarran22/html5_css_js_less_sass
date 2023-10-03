@@ -1,0 +1,15 @@
+div {
+  width: 50%;
+}
+div h1 {
+  color: green;
+}
+div nav {
+  height: 50px;
+}
+div nav a {
+  text-decoration: none;
+  color: blue;
+}
+
+/*# sourceMappingURL=anidamientos.css.map */
