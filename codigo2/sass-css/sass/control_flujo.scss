@@ -31,7 +31,8 @@ $etiquetas: p span input ul ol form;
 $propiedades: 
 (
     "p":("color":red, "background-color": black),
-    "input":("border":1px solid blue)
+    "input":("border":1px solid blue),
+    "ul": ("background-color":black)
 );
 // $i representa cada uno de los items de la lista:
 @each $i in $etiquetas {
@@ -41,6 +42,10 @@ $propiedades:
 
         @if (map.has-key($propiedades, $i)){
             @debug 'La etiqueta #{$i} tiene propiedades';
+
+            @each $propiedad, $valor in map.get($propiedades, $i) {
+                #{$propiedad}:$valor;
+            }
         }
     }
 }

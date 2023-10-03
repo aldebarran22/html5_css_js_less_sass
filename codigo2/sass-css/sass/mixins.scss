@@ -1,0 +1,57 @@
+/* Definición de mixins */
+@use 'sass:map';
+
+// Generador de tablas:
+// Mixins parametrizado: centrada, rayada, totalizar-filas
+// totalizar-cols, cab-unificada
+// @include tabla(centrada:true, cab-unificada:true)
+// @include tabla(rayada:true, totalizar-filas:true)
+
+$cab-color-fondo: orange;
+$cab-color-texto: black;
+$detalle-color-even: grey;
+$detalle-color-odd: white;
+$detalle-color-texto: black;
+
+@mixin centrado {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin formatear-tabla($cab-unificada:true, $centrado:true){
+
+    @if (cab-unificada){
+        border-collapse: collapse;
+
+        th {
+            background-color: $cab-color-fondo;
+            color: $cab-color-texto;
+        }
+    }
+
+    @if ($centrado){
+        @include centrado;
+    }
+}
+
+@mixin contenedor($nombreClass, $w, $h){
+
+    #{$nombreClass}{
+        width: $w;
+        height: $h;
+    }
+}
+
+table {
+    // Genera propiedades
+    @include formatear-tabla(true, true);
+}
+
+// Genera una regla
+@include contenedor(".caja", 150px, 150px);
+
+
+
+
+
+
