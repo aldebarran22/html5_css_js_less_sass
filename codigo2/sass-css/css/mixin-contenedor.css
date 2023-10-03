@@ -8,7 +8,55 @@
     top: 50%;
     margin-top:-100px
 }
-
 */
+caja-10 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10%;
+  height: 10%;
+  margin-top: -5%;
+  margin-left: -5%;
+}
+
+caja-20 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 20%;
+  margin-top: -10%;
+  margin-left: -10%;
+}
+
+caja-30 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin-top: -15%;
+  margin-left: -15%;
+}
+
+caja-40 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  margin-top: -20%;
+  margin-left: -20%;
+}
+
+caja-50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  margin-top: -25%;
+  margin-left: -25%;
+}
 
 /*# sourceMappingURL=mixin-contenedor.css.map */
