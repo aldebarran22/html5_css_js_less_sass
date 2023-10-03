@@ -1,0 +1,11 @@
+header h1 {
+  color: red;
+}
+header nav a {
+  text-decoration: none;
+}
+header nav a:HOVER {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=espacios.css.map */

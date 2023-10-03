@@ -1,0 +1,17 @@
+
+header {
+    h1 {
+        color:red;
+
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+
+            &:HOVER {
+                text-decoration: underline;
+            }
+        }
+    }
+}
