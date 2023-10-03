@@ -18,7 +18,8 @@ $detalle-color-texto: black;
     margin-right: auto;
 }
 
-@mixin formatear-tabla($cab-unificada:true, $centrado:true){
+@mixin formatear-tabla($cab-unificada:true, 
+$centrado:true, $rayada:true, $totalizar-filas:true){
 
     @if (cab-unificada){
         border-collapse: collapse;
@@ -31,6 +32,21 @@ $detalle-color-texto: black;
 
     @if ($centrado){
         @include centrado;
+    }
+
+    @if ($rayada){
+        tr:nth-of-type(even){
+            background-color: $detalle-color-even;
+        }
+        tr:nth-of-type(odd){
+            background-color: $detalle-color-odd;
+        }
+    }
+
+    @if ($totalizar-filas){
+        tr:last-child {
+            font-weight: bolder;
+        }
     }
 }
 
