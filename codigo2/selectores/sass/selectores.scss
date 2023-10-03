@@ -1,0 +1,12 @@
+
+$selector: "~";
+
+.menu {
+
+    #{$selector} {
+
+        p {
+            color: red;
+        }
+    }
+}

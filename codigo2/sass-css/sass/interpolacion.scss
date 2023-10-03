@@ -1,0 +1,31 @@
+// Interpolar variables aplicadas a selectores o propiedades:
+
+$indice:3;
+$encabezado: h1;
+$propiedad: color;
+$valor: red;
+$fontSize: 12px;
+
+:root {
+    // Definición de custom properties
+    // con variables de SASS
+    --font-size: #{$fontSize};
+    --color: blue;
+}
+
+p {
+    font-size: var(--font-size);
+    color: var(--color);
+}
+
+
+#{$encabezado} {
+    color: green;
+    background-#{$propiedad}: $valor;
+}
+
+h#{$indice} {
+    #{$propiedad}:$valor;
+}
+
+

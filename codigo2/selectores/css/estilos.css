@@ -1,0 +1,19 @@
+
+.contenedor p {
+    /* párrafos anidados a cualquier nivel*/
+    color:red;
+}
+
+.contenedor > p {
+    /* hijos directos */
+    color:blue;
+}
+
+/* Los p seguidos de un span*/
+.contenedor2 p + .contenedor2 span.caption {
+    color:green;
+}
+
+.contenedor3 p ~ span {
+    font-weight:bolder;
+}

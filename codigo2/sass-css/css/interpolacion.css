@@ -1,0 +1,20 @@
+:root {
+  --font-size: 12px;
+  --color: blue;
+}
+
+p {
+  font-size: var(--font-size);
+  color: var(--color);
+}
+
+h1 {
+  color: green;
+  background-color: red;
+}
+
+h3 {
+  color: red;
+}
+
+/*# sourceMappingURL=interpolacion.css.map */

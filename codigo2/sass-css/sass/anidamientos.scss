@@ -1,10 +1,13 @@
 $color-texto: green;
+$width: 100%;
 
-div { 
-    width: 50%;
+header { 
+    // Variable local al header
+    $fontSize: 12px;
 
     h1 {
         color: $color_texto;
+        font-size: $fontSize * 2;
     }       
     
     nav {
@@ -13,7 +16,25 @@ div {
 
         a {
             text-decoration: none;
-            color: blue;
+            color: red;
+            font-size: 12px;
         }
     }
+}
+
+footer {
+    // Variable local al footer
+    $fontSize: 10px;
+
+    // El cambio de la var. 
+    // se hace permanente:
+    $color-texto:blue !global;
+
+    h3 {
+        font-size: calc($fontSize / 2);
+    }
+}
+
+form {
+    color:$color-texto;
 }

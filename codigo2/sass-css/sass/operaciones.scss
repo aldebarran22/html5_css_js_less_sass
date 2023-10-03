@@ -1,0 +1,30 @@
+// Definición de operaciones:
+
+@use 'sass:math';
+
+$tam1: 2px;
+$tam2: 16px;
+$tam3: 2.5rem;
+$tam4: 1.5rem;
+
+// Las dos con uds: 
+$uds: $tam1 + $tam2;
+@debug 'tam1: ' $tam1;
+@debug 'tam2: #{$tam2}'; // Interpolar la variable
+$uds: $tam2 - $tam1;
+
+// Interpolar variables dentro de una cadena de texto en  debug
+
+// mul variable por una cte: ok
+// mul dos variables con uds: error
+
+// div con dos variables con uds quita la unidad:
+@debug 'tam2 / tam1: #{math.div($tam2, $tam1)}';
+// Se puede mul por 1px para añadir la unidad
+
+h1 {
+    font-size: $uds * 2;
+    margin: $tam3 + $tam4;
+    padding: $tam3 * 5;
+    border: math.div($tam2, $tam1)*1rem solid grey;
+}
