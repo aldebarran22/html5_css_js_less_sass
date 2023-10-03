@@ -1,6 +1,7 @@
 /* Ejemplos de control de flujo en SASS */
 
 @use 'sass:list';
+@use 'sass:map';
 
 $fontSize: 8px;
 
@@ -15,6 +16,7 @@ $fontSize: 8px;
 // Un ejemplo con listas:
 $margen: 30px 20px 10px 5px 2px 1px; // lista empiezan en 1
 $colores: blue yellow #fff #c0c0c0 rgb(12,45,66) rgba(34,6,11,0.5);
+// $i representa el índice con valores del 1 al 6
 @for $i from 1 through 6 {
     .contenedor {
 
@@ -24,4 +26,25 @@ $colores: blue yellow #fff #c0c0c0 rgb(12,45,66) rgba(34,6,11,0.5);
         }
     }
 }
+
+$etiquetas: p span input ul ol form;
+$propiedades: 
+(
+    "p":("color":red, "background-color": black),
+    "input":("border":1px solid blue)
+);
+// $i representa cada uno de los items de la lista:
+@each $i in $etiquetas {
+    #{$i}{
+        margin:0;
+        padding:0;
+
+        @if (map.has-key($propiedades, $i)){
+            @debug 'La etiqueta #{$i} tiene propiedades';
+        }
+    }
+}
+
+
+
 

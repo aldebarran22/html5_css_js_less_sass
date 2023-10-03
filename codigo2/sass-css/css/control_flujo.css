@@ -59,4 +59,34 @@ h1 {
   color: rgba(34, 6, 11, 0.5);
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
 /*# sourceMappingURL=control_flujo.css.map */
