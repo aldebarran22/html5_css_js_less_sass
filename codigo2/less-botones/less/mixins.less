@@ -1,0 +1,38 @@
+.vertical(@color-ini: @basecolor, @color-fin:@compcolor){
+    // Genera un degradado vertical de un color a otro
+    // Si el navegador no tiene linear-gradient asigna
+    // un color de fondo fijo.
+    background: linear-gradient(to left top, @color-ini, @color-fin);
+
+    background-color: @color-ini;    
+}
+
+.border-radius(@radius:@botonradio){
+    -webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	-ms-border-radius: @radius;
+	-o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.boton(@tipo:@botonbg){
+    .vertical(@tipo, darken(@tipo, 30));
+    .border-radius();
+
+    // Borde del botón
+    border:1px solid @botonborde;
+
+    // Texto del boton
+    color: @botoncolor;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.35);
+
+    // Layout: colocación y dimensiones de los botones:
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    height:25px;
+    list-style: none;
+    vertical-align: middle;
+    padding: 0 2rem;
+    cursor:pointer;
+}
