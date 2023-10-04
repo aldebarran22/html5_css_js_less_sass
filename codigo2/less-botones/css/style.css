@@ -3,8 +3,88 @@ ul {
   padding: 0;
 }
 ul li {
+  background: linear-gradient(to left top, #5bb75b, #255425);
+  background-color: #5bb75b;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #2d636a;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+.boton-alert {
   background: linear-gradient(to left top, #fc0000, #630000);
   background-color: #fc0000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #2d636a;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+.boton-error {
+  background: linear-gradient(to left top, #da4f49, #731b17);
+  background-color: #da4f49;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #2d636a;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+.boton-info {
+  background: linear-gradient(to left top, #d9edf7, #5bb1dc);
+  background-color: #d9edf7;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #2d636a;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  height: 25px;
+  list-style: none;
+  vertical-align: middle;
+  padding: 0 2rem;
+  cursor: pointer;
+}
+.boton-success {
+  background: linear-gradient(to left top, #5bb75b, #255425);
+  background-color: #5bb75b;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
