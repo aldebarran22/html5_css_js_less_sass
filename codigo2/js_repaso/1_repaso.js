@@ -64,4 +64,42 @@ const numeros2 = [3, 4, 5, 9, 11];
 const n2 = numeros2.map((n) => n + 1);
 console.log(n2);
 
+const copia2 = [];
+numeros2.forEach((n) => copia2.push(n));
+console.log(copia2);
 
+// Buscar un elemento en un array:
+const resul2 = numeros2.includes(5);
+console.log(resul2);
+if (resul2) {
+  const indice = numeros2.findIndex((n) => n === 5);
+  console.log(indice);
+}
+
+// some / every
+console.log(
+  "some > 5: ",
+  numeros2.some((n) => n > 5)
+);
+console.log(
+  "every > 5: ",
+  numeros2.every((n) => n > 0)
+);
+
+const alum = { nombre: "Javier" };
+setTimeout(() => {
+  alum.examen = { test: 9 };
+  console.log("Nota test in: " + alum.examen?.test);
+}, 3000);
+console.log("Nota test out: " + alum.examen?.test);
+
+/*
+console.log("2"==2);
+console.log("2"===2);
+
+function sumar(a = 10, b = 20) {
+  return a + b;
+}
+console.log(sumar());
+console.log(sumar(12,44));
+*/
