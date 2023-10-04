@@ -1,2 +1,42 @@
 // Generar encabezados con un each y cambiando el color
 
+
+// @index, @key, @value
+@color:orange;
+
+// range(ini, fin, salto:1)
+each(range(1,6,2),{
+    h@{value}{
+        color:darken(@color, @value*10);
+    }}
+);
+
+each(range(3,4),{
+    .col@{value}{
+        color:darken(@color, @value*10);
+    }}
+);
+
+@lista: {h1:red; h2:blue; h3:green; h5:black};
+@oscurecer: true;
+@padding: 1.5px;
+@margen: 0.2;
+
+each(@lista, {
+    @{key}{
+        color:if((@oscurecer), darken(@value, 10), @value);
+        margin: percentage(@margen);
+        padding:if((ispixel(@padding)), @padding*2, @padding);
+    }
+});
+
+
+/*
+@valor:1;
+if((@valor=1),
+{
+    p {color:red;}
+},
+{
+    span {color:green;}
+});*/

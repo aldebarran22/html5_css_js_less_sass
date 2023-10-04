@@ -1,7 +1,7 @@
 
 // Definición de variables en less:
 
-
+@import 'definicion.less';
 
 h1 {
     background-color:@color;
@@ -10,7 +10,7 @@ h1 {
 
 .capa {
     // importar el fichero local a la regla:
-    @import 'definicion.less';
+   
     width:22px;/* `'cadena'.length`px;*/ // lessc --js variables.less variables.css
 }
 

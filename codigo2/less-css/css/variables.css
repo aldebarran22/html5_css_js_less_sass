@@ -6,3 +6,6 @@ h1 {
   width: 22px;
   /* `'cadena'.length`px;*/
 }
+h2 {
+  color: red;
+}

@@ -1,0 +1,44 @@
+h1 {
+  color: #cc8400;
+}
+h3 {
+  color: #664200;
+}
+h5 {
+  color: #000000;
+}
+.col3 {
+  color: #664200;
+}
+.col4 {
+  color: #332100;
+}
+h1 {
+  color: #cc0000;
+  margin: 20%;
+  padding: 3px;
+}
+h2 {
+  color: #0000cc;
+  margin: 20%;
+  padding: 3px;
+}
+h3 {
+  color: #004d00;
+  margin: 20%;
+  padding: 3px;
+}
+h5 {
+  color: #000000;
+  margin: 20%;
+  padding: 3px;
+}
+/*
+@valor:1;
+if((@valor=1),
+{
+    p {color:red;}
+},
+{
+    span {color:green;}
+});*/
