@@ -1,11 +1,35 @@
+/*
+.if((@debug), {
+    .-then(){
+        header {
+            background-color: yellow;
+            #title {
+                background-color: orange;
+            }
+        }
+        article {
+            background-color: red;
+        }
+    }
+});*/
+.mixin1 {
+  background-color: orange;
+  font-weight: 200;
+}
 h1 {
   color: #cc8400;
+  background-color: orange;
+  font-weight: 200;
 }
 h3 {
   color: #664200;
+  background-color: orange;
+  font-weight: 200;
 }
 h5 {
   color: #000000;
+  background-color: orange;
+  font-weight: 200;
 }
 .col3 {
   color: #664200;

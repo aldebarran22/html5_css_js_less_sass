@@ -4,10 +4,33 @@
 // @index, @key, @value
 @color:orange;
 
+@debug:true;
+
+/*
+.if((@debug), {
+    .-then(){
+        header {
+            background-color: yellow;
+            #title {
+                background-color: orange;
+            }
+        }
+        article {
+            background-color: red;
+        }
+    }
+});*/
+
+.mixin1 {
+    background-color:@color;
+    font-weight: 200;
+}
+
 // range(ini, fin, salto:1)
 each(range(1,6,2),{
     h@{value}{
         color:darken(@color, @value*10);
+        .mixin1;
     }}
 );
 

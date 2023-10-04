@@ -1,0 +1,26 @@
+// Pruebas con mixin en less:
+
+@entorno:produccion;
+
+
+.layout(desarrollo;){
+    //@import './modulos/desarrollo.less';
+    color:green;
+    background-color:grey;
+    font-size:40px;  
+}
+
+
+.layout(produccion;){
+    //@import './modulos/produccion.less';
+    color:orange;
+    background-color: black;
+    font-size:20px;
+}
+
+
+.contenedor{
+    .layout(@entorno);
+}
+
+
