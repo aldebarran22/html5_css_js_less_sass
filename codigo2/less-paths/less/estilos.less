@@ -1,5 +1,16 @@
 @import 'path.less';
 
+@color-fondo:green;
+@encabezado: 1;
+
 body {
     background-image:url("../img/@{path-img}/fondo.gif");
+    // Ojo espacios en las operaciones: diferencia y division
+    margin:@margin+5 (@margin - 10) @margin*2 (@margin / 2);
+    
+    
+}
+
+h@{encabezado}{
+    color: if((@path-img='produccion'),darken(@color-fondo,40), @green);
 }

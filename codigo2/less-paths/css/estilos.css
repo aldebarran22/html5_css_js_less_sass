@@ -1,3 +1,7 @@
 body {
   background-image: url("../img/produccion/fondo.gif");
+  margin: 25px 10px 40px 10px;
+}
+h1 {
+  color: #000000;
 }
