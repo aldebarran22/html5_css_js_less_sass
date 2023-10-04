@@ -1,0 +1,8 @@
+h1 {
+  background-color: red;
+  font-size: 12px;
+}
+.capa {
+  width: 22px;
+  /* `'cadena'.length`px;*/
+}
