@@ -1,0 +1,16 @@
+//@import "variables.less";
+// Para calcular el resultado en pixels
+@ancho_fixed: (@columnas * @ancho_columnas) + (@columnas * @ancho_margen) * 1px;
+
+
+// Para trabajar con pixels:
+@ancho_total: @ancho_fixed;
+
+// Para trabajar en %
+//@ancho_total: 100%;
+
+.columnas(@ocupa){
+    // ocupa: el número de columnas que ocupamos (de 1 a 12)
+    width: @ancho_total * ((((@ancho_columnas + @ancho_margen) * @ocupa) - @ancho_margen) / @ancho_fixed);
+    margin: 0 (@ancho_total * ((@ancho_margen * 0.5)/@ancho_fixed));
+}
