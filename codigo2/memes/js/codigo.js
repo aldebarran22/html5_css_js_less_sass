@@ -1,6 +1,14 @@
 const urlMemes = "https://api.imgflip.com/get_memes";
 let capa;
 const clasePorDefecto = "col-4";
+// Las opciones del combo: número de memes por fila
+const opciones = new Map([
+  ["col-12", 1],
+  ["col-6", 2],
+  ["col-4", 3],
+  ["col-3", 4],
+  ["col-2", 6],
+]);
 
 const procesar = (memes) => {
   console.log("num. memes: " + memes.length);
