@@ -1,0 +1,28 @@
+.base-contenedor,
+.contenedor {
+  background-color: #fff;
+  color: black;
+}
+.contenedor {
+  border: 1px solid red;
+  width: 90%;
+}
+/* Prueba herencia múltiple*/
+.fuente2,
+.colores-fuente {
+  font-family: Verdana;
+  font-size: 24px;
+}
+.fuente,
+.colores-fuente {
+  font-family: Tahoma;
+  font-size: 14px;
+}
+.colores,
+.colores-fuente {
+  color: red;
+  background-color: white;
+}
+.colores-fuente {
+  border: 1px solid black;
+}
