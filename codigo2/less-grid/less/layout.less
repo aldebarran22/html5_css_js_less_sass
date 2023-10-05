@@ -1,8 +1,20 @@
-span {
-    .columnas(2);
+/*span {
+    .columnas(12);
     display:block;
     height: 50px;
     float:left;
     background-color:grey;
     border: 1px solid black;
-}
+
+}*/
+
+each(range(12), {
+
+    .col-@{value}{
+        .columnas(@value);
+        display: block;
+        float:left;
+        background-color: grey;
+        margin-bottom: 5px;
+    }
+});
