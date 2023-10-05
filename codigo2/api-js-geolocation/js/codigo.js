@@ -20,7 +20,8 @@ addEventListener("load", () => {
       },
       (error) => {
         mostrarInfo(capa, error.message, "red");
-      }
+      },
+      { enabledHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
     );
   });
 });
