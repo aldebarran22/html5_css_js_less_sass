@@ -1,5 +1,7 @@
 
 @columnas:12;
+@crear-fuentes:false;
+
 
 .columna(@n){
     width: @n*(100% / @columnas);
@@ -16,3 +18,12 @@
 }
 
 .grid(1);
+
+.if(@fuentes) when (@fuentes){
+
+    .fuentes-texto {
+        font-size: 12px;
+    }
+}
+
+.if(@crear-fuentes);
