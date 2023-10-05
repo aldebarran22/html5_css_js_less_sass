@@ -16,7 +16,7 @@ addEventListener("load", () => {
         mostrarInfo(capa, info, "blue");
 
         const enlace = document.querySelector("#map-link");
-        enlace.href = `https://openstreetmap.org/#map=20/${posicion.coords.latitude}/${posicion.coords.longitude}`;
+        enlace.href = `https://openstreetmap.org/?mlat=${posicion.coords.latitude}&mlon=${posicion.coords.longitude}#map=20/${posicion.coords.latitude}/${posicion.coords.longitude}`;
       },
       (error) => {
         mostrarInfo(capa, error.message, "red");
