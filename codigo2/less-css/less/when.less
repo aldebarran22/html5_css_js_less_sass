@@ -1,0 +1,18 @@
+
+@columnas:12;
+
+.columna(@n){
+    width: @n*(100% / @columnas);
+}
+
+.grid(@i) when (@i <= @columnas){
+
+    .col-@{i}{
+        .columna(@i);
+        border: 1px solid black;
+    }
+
+    .grid(@i+1); 
+}
+
+.grid(1);
