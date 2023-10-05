@@ -1,0 +1,13 @@
+// Ejemplo de bucle while:
+
+$i:1;
+$fin:6;
+
+@while $i <= $fin {
+
+    h#{$i}{
+        font-size: $i * $fin * 1px;
+    }
+
+    $i:$i+1;
+}

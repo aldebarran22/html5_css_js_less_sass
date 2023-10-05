@@ -1,0 +1,17 @@
+.base-contenedor, .contenedor1, .contenedor2 {
+  color: red;
+  background-color: grey;
+  font-family: Tahoma;
+}
+
+.contenedor1, .contenedor2 {
+  border: 1px solid black;
+  width: 90%;
+}
+
+.contenedor2 {
+  border: 5px solid #c4c4c4;
+  height: 100px;
+}
+
+/*# sourceMappingURL=extend.css.map */

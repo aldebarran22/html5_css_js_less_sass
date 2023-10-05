@@ -1,0 +1,9 @@
+/* Pruebas con los módulos de SASS */
+
+@use 'sass:meta';
+
+$color: rgb(12,44,56);
+$lista: 3 5 1 50;
+
+@debug meta.type-of($color);
+@debug meta.type-of($lista);

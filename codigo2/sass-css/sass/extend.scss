@@ -1,0 +1,23 @@
+// Prueba con la herencia
+
+$color-texto: red;
+$color-fondo: grey;
+
+.base-contenedor {
+    color: $color-texto;
+    background-color: $color-fondo;
+    font-family: Tahoma;
+}
+
+.contenedor1 {
+    @extend .base-contenedor;
+    border: 1px solid black;
+    width: 90%;
+}
+
+.contenedor2 {
+    @extend .contenedor1;
+    border: 5px solid #c4c4c4;
+    height:100px;
+}
+
