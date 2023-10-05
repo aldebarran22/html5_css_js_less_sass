@@ -10,8 +10,21 @@ const opciones = new Map([
   ["col-2", 6],
 ]);
 
+const cargaCombo = (combo) => {
+  let opcion;
+
+  opciones.forEach((value, key) => {
+    opcion = document.createElement("option");
+    opcion.value = key;
+    opcion.appendChild(document.createTextNode(value));
+    combo.appendChild(opcion);
+  });
+};
+
 const procesar = (memes) => {
-  console.log("num. memes: " + memes.length);
+  let h1 = document.querySelector(".header h1");
+  h1.innerHTML = "Memes (" + memes.length + ")";
+
   for (let meme of memes) {
     let capaImg = document.createElement("div");
     capaImg.className = clasePorDefecto;
@@ -41,5 +54,24 @@ const getMemes = () => {
 
 addEventListener("load", () => {
   capa = document.getElementById("contenedor");
+  let combo = document.getElementById("numMemes");
+  cargaCombo(combo);
+
+  // Seleccionar el número de memes por defecto:
+  combo.selectedIndex = opciones.get(clasePorDefecto) - 1;
+
+  // Registrar un evento change:
+  combo.addEventListener("change", () => {
+    // Extraer el nombre de la clase seleccionada del combo:
+    let nombreClase = combo.options[combo.selectedIndex].value;
+
+    // Seleccionar las capas que contienen las imágenes:
+    let capasImg = document.querySelectorAll("#contenedor div");
+    if (capasImg != null) {
+      for (let c of capasImg) {
+        c.className = nombreClase;
+      }
+    }
+  });
   getMemes();
 });
