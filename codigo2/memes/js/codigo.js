@@ -7,7 +7,6 @@ const opciones = new Map([
   ["col-6", 2],
   ["col-4", 3],
   ["col-3", 4],
-  ["col-2", 6],
 ]);
 
 const cargaCombo = (combo) => {
@@ -33,7 +32,10 @@ const procesar = (memes) => {
     let img = new Image();
     img.src = meme.url;
     img.height = 150;
-    let titulo = document.createTextNode(meme.name);
+    img.title = meme.name;
+    let strTitulo =
+      meme.name.length > 15 ? meme.name.substring(0, 15) + " ..." : meme.name;
+    let titulo = document.createTextNode(strTitulo);
     figCaption.appendChild(titulo);
     figure.appendChild(img);
     figure.appendChild(figCaption);
