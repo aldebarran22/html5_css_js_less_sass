@@ -21,3 +21,29 @@ $color-fondo: grey;
     height:100px;
 }
 
+/* Herencia múltiple*/
+.fuente2 {
+    font-family: Verdana;
+    font-size:24px;
+}
+
+.fuente {
+    font-family: Tahoma;
+    font-size:14px;
+}
+
+
+.colores {
+    color:red;
+    background-color:white;
+}
+
+.colores-fuente {
+    //El orden de aquí NO afecta
+    // Lo toma de la posición donde
+    // están declaradas las reglas
+    @extend .fuente2, .fuente, .colores;
+    border: 1px solid black;
+}
+
+

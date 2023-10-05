@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .base-contenedor, .contenedor1, .contenedor2 {
   color: red;
   background-color: grey;
@@ -12,6 +13,26 @@
 .contenedor2 {
   border: 5px solid #c4c4c4;
   height: 100px;
+}
+
+/* Herencia múltiple*/
+.fuente2, .colores-fuente {
+  font-family: Verdana;
+  font-size: 24px;
+}
+
+.fuente, .colores-fuente {
+  font-family: Tahoma;
+  font-size: 14px;
+}
+
+.colores, .colores-fuente {
+  color: red;
+  background-color: white;
+}
+
+.colores-fuente {
+  border: 1px solid black;
 }
 
 /*# sourceMappingURL=extend.css.map */
