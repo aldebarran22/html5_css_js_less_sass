@@ -1,0 +1,5 @@
+A partir de la pagina dada se pretende crear una lista 
+(<ol></ol>) de nombres que el usuario podra gestionar 
+añadiendo o eliminando mediante dos botones. 
+La lista de nombres se verá justo despues 
+de la etiqueta de la pagina. 
