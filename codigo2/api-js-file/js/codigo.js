@@ -1,25 +1,28 @@
 let capa;
 
 function cargaImg(fichero) {
-  let reader = FileReader();
+  let reader = new FileReader();
   reader.addEventListener("load", (e) => {
     // Los datos están e.target.result
+    capa.innerHTML += `<img src='${e.target.result}' alt='foto'>`;
   });
   reader.readAsDataURL(fichero);
 }
 
 function cargaTxt(fichero) {
-  let reader = FileReader();
+  let reader = new FileReader();
   reader.addEventListener("load", (e) => {
     // Los datos están e.target.result
+    capa.innerHTML += "<p>" + e.target.result + "</p>";
   });
-  reader.readAsText(fichero);
+  reader.readAsText(fichero, "iso-8859-1");
 }
 
 function cargaBin(fichero) {
-  let reader = FileReader();
+  let reader = new FileReader();
   reader.addEventListener("load", (e) => {
     // Los datos están e.target.result
+    capa.innerHTML += "<pre>" + e.target.result + "</pre>";
   });
   reader.readAsBinaryString(fichero);
 }
