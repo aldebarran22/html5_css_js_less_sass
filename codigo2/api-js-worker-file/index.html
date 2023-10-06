@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--<script src="js/main.js"></script>-->
+    <script type="text/javascript">
+        addEventListener("load", () => {
+            let capa = document.getElementById("contenedor");
+            capa.innerHTML = "";
+            let mensaje = document.getElementById("mensaje");
+
+            let worker = new Worker("./js/worker.js");
+
+            // Registrar un evento para recibir mensajes:
+            worker.addEventListener("message", (e) => {
+                capa.innerHTML += e.data + "<br>";
+            });
+
+            let boton = document.getElementById("boton");
+            boton.addEventListener("click", () => {
+                console.log("mensaje: " + mensaje.value)
+                worker.postMessage(mensaje.value);
+                mensaje.value = "";
+            });
+
+            let boton2 = document.getElementById("boton2");
+            boton2.addEventListener("click", () => {
+                worker.terminate();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form action="">
+        <label for="mensaje">Mensaje</label>
+        <input type="text" id="mensaje" name="mensaje" placeholder="mensaje"><br>
+        <button type="button" id="boton">Enviar datos</button>
+        <button type="button" id="boton2">Terminar Thread</button>
+    </form>
+    <h3>Contenido recibido</h3>
+    <div id="contenedor"></div>
+</body>
+
+</html>
