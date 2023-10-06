@@ -2,6 +2,9 @@
 const WebSocket = require("ws");
 const http = require("http");
 
+// Mapa de clientes:
+mapa = new Map();
+
 // Crear el servidor HTTP:
 const server = http.createServer();
 
@@ -18,24 +21,38 @@ wss.on("connection", (socket) => {
   console.log("Port: ", socket._socket.remotePort);*/
   console.log("Número de clientes conectados: ", wss.clients.size);
 
-  wss.clients.forEach((cliente) => {
-    if (cliente.readyState === WebSocket.OPEN) {
-      if (cliente._socket.remotePort !== socket._socket.remotePort)
-        cliente.send(`Se ha conectado: ${socket._socket.remotePort}`);
-    }
-  });
-
   // Recibir mensaje de un cliente:
   socket.on("message", (data) => {
-    console.log("Recibe del cliente: " + data.toString());
+    let obj = JSON.parse(data.toString());
+    let port = socket._socket.remotePort;
+    mapa[port] = obj.nick;
+
+    console.log("Mapa", mapa.toString());
+
+    // Presentar al resto de usuarios:
+    wss.clients.forEach((cliente) => {
+      if (cliente.readyState === WebSocket.OPEN) {
+        if (cliente._socket.remotePort !== socket._socket.remotePort)
+          cliente.send(`Se ha conectado: ${mapa[socket._socket.remotePort]}`);
+      }
+    });
 
     // Enviar mensaje de respuesta al cliente:
-    socket.send("server: " + data.toString());
+    socket.send("Bienvenido: " + obj.nick);
   });
 
   // Un cliente se desconecta:
   socket.on("close", () => {
     console.log("Se ha desconectado un cliente ...");
+    // Presentar al resto de usuarios:
+    wss.clients.forEach((cliente) => {
+      if (cliente.readyState === WebSocket.OPEN) {
+        if (cliente._socket.remotePort !== socket._socket.remotePort)
+          cliente.send(
+            `Se ha desconectado: ${mapa[socket._socket.remotePort]}`
+          );
+      }
+    });
   });
 });
 
