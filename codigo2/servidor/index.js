@@ -21,7 +21,7 @@ wss.on("connection", (socket) => {
   wss.clients.forEach((cliente) => {
     if (cliente.readyState === WebSocket.OPEN) {
       if (cliente._socket.remotePort !== socket._socket.remotePort)
-        cliente.send("Se ha conectado: ", cliente._socket.remotePort);
+        cliente.send(`Se ha conectado: ${socket._socket.remotePort}`);
     }
   });
 
