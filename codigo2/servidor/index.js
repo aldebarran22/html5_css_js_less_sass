@@ -11,11 +11,19 @@ const wss = new WebSocket.Server({ server });
 // Registrar eventos:
 wss.on("connection", (socket) => {
   // El parámetro representa a un cliente que se ha conectado.
-  console.log("Se ha conectado un cliente ...");
+  console.log("Se ha conectado el cliente: ", socket._socket.remotePort);
+  /*
   console.log("address: ", socket._socket.address());
   console.log("IP: ", socket._socket.remoteAddress);
-  console.log("Port: ", socket._socket.remotePort);
+  console.log("Port: ", socket._socket.remotePort);*/
   console.log("Número de clientes conectados: ", wss.clients.size);
+
+  wss.clients.forEach((cliente) => {
+    if (cliente.readyState === WebSocket.OPEN) {
+      if (cliente._socket.remotePort !== socket._socket.remotePort)
+        cliente.send("Se ha conectado: ", cliente._socket.remotePort);
+    }
+  });
 
   // Recibir mensaje de un cliente:
   socket.on("message", (data) => {
