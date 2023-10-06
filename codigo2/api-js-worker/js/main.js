@@ -1,3 +1,4 @@
+/*
 addEventListener("load", () => {
   let capa = document.getElementById("contenedor");
   capa.innerHTML = "";
@@ -20,4 +21,4 @@ addEventListener("load", () => {
   boton2.addEventListener("click", () => {
     worker.terminate();
   });
-});
+});*/

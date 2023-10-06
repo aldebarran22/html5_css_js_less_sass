@@ -5,8 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/main.js"></script>
-    <script src="js/worker.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script type="text/javascript">
+        addEventListener("load", () => {
+            let capa = document.getElementById("contenedor");
+            capa.innerHTML = "";
+            let mensaje = document.getElementById("mensaje");
+
+            let worker = new Worker("./js/worker.js");
+
+            // Registrar un evento para recibir mensajes:
+            worker.addEventListener("message", (e) => {
+                capa.innerHTML += e.data + "<br>";
+            });
+
+            let boton = document.getElementById("boton");
+            boton.addEventListener("click", () => {
+                console.log("mensaje: " + mensaje.value)
+                worker.postMessage(mensaje.value);
+                mensaje.value = "";
+            });
+
+            let boton2 = document.getElementById("boton2");
+            boton2.addEventListener("click", () => {
+                worker.terminate();
+            });
+        });
+    </script>
 </head>
 
 <body>
