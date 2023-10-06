@@ -2,10 +2,14 @@ let capa;
 
 addEventListener("load", () => {
   capa = document.getElementById("contenedor");
-  let fichero1 = document.querySelector("#fichero1");
-  fichero1.addEventListener("change", (e) => {
-    console.log("change");
-    //let ficheros = e.target.files;
-    //console.log("numFich:" + ficheros.length);
-  });
+  let ficheros = document.querySelectorAll("form input");
+  for (let fich of ficheros) {
+    fich.addEventListener("change", (e) => {
+      let ficheros = e.target.files;
+      let fichero = ficheros[0];
+      console.log("type: " + fichero.type);
+
+      
+    });
+  }
 });
