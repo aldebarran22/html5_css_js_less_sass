@@ -5,25 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!--<script src="js/main.js"></script>-->
+    <style>
+        button {
+            margin-bottom: 10px;
+        }
+    </style>
     <script type="text/javascript">
         addEventListener("load", () => {
             let capa = document.getElementById("contenedor");
             capa.innerHTML = "";
-            let mensaje = document.getElementById("mensaje");
-
             let worker = new Worker("./js/worker.js");
+
+            let mensaje = document.getElementById("mensaje");
+            mensaje.addEventListener("change", (e) => {
+                let ficheros = e.target.files;
+                let fichero = ficheros[0];
+                worker.postMessage(fichero);
+            });
 
             // Registrar un evento para recibir mensajes:
             worker.addEventListener("message", (e) => {
                 capa.innerHTML += e.data + "<br>";
-            });
-
-            let boton = document.getElementById("boton");
-            boton.addEventListener("click", () => {
-                console.log("mensaje: " + mensaje.value)
-                worker.postMessage(mensaje.value);
-                mensaje.value = "";
             });
 
             let boton2 = document.getElementById("boton2");
@@ -37,8 +39,7 @@
 <body>
     <form action="">
         <label for="mensaje">Mensaje</label>
-        <input type="text" id="mensaje" name="mensaje" placeholder="mensaje"><br>
-        <button type="button" id="boton">Enviar datos</button>
+        <input type="file" id="mensaje" name="mensaje" placeholder="mensaje"><br>
         <button type="button" id="boton2">Terminar Thread</button>
     </form>
     <h3>Contenido recibido</h3>
