@@ -1,0 +1,9 @@
+
+/* Contenedor principal */
+
+#contenedor {
+    width: 700px;
+    margin: 20px auto;
+    border: 1px solid black;
+    text-align: center;
+}
