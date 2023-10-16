@@ -1,0 +1,11 @@
+#contenedor {
+    /* Colocar un contenedor centrado */
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}
