@@ -1,0 +1,24 @@
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bordes {
+    border: 1px solid black;
+}
+
+.bordes td {
+    border: 1px solid black;
+}
+
+.tabla-maqueta {
+    text-align: center;
+    width:100%;
+    background-color: #fff;
+}
+
+.tabla-contenedor {
+    width: 600px;
+    background-color: grey;
+}
