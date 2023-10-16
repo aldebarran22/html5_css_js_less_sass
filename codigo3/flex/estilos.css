@@ -1,0 +1,33 @@
+
+.contenedor {
+    margin:50px auto;
+    width:80%;
+    border:1px solid grey;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding:0px 5px;
+    align-items: center;
+}
+
+#botones {
+    height:50px;
+    display: flex;
+    justify-content:space-around;
+}
+
+#botones2 {
+    height:50px;
+    display: flex;
+    justify-content:center;
+    gap:5px;
+}
+
+#botones3 {
+    height:200px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap:5px;
+}
