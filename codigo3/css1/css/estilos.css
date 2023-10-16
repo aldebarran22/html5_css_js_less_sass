@@ -2,7 +2,7 @@
 /* Contenedor principal */
 
 body {
-    font-family: Tahoma, Verdana;
+    font-family: Verdana, Tahoma;
     font-size: 12px;
     background: url('../img/fondo.gif');
 }
@@ -40,6 +40,8 @@ header a {
 @media (min-width:576px){
     main {
         display: flex;
+        /* los pega en los extremos del contenedor */
+        justify-content: space-between;
     }
 }
 
@@ -54,6 +56,22 @@ aside {
     /*float:right;*/
     width: 30%;
     padding: 5px;
+}
+
+aside ul li {
+    list-style: none;
+    list-style-image: url('../img/bullet.gif');
+}
+
+.contenedor-lateral {
+    background-color: #fff;
+    padding:5px;
+}
+
+.contenedor-lateral h2 {
+    background-color: rgb(74, 74, 221);
+    color: white;
+
 }
 
 form {
