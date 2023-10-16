@@ -1,0 +1,18 @@
+.contenedor {
+    width:250px;
+    overflow: auto;
+    height:300px;
+    margin:20px;
+    text-align: left;
+}
+
+.caja {
+    position:fixed;
+    width:150px;
+    height: 50px;
+    background-color:blue;
+    top:100px;
+    left:20px;
+    opacity:0.8;
+}
+
