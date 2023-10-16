@@ -1,9 +1,38 @@
 
 /* Contenedor principal */
 
+body {
+    font-family: Tahoma, Verdana;
+}
+
+
 #contenedor {
     width: 700px;
     margin: 20px auto;
     border: 1px solid black;
     text-align: center;
 }
+
+@media (min-width:576px){
+    main {
+        display: flex;
+    }
+}
+
+section {
+    /*float:left;*/
+    text-align: justify;
+    width: 60%;
+    padding:5px;
+}
+
+aside {
+    /*float:right;*/
+    width: 30%;
+}
+
+/* Restaurar la forma de pintar del nave.*/
+/*
+.clear {
+    clear: both;
+}*/
