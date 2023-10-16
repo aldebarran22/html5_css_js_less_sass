@@ -12,6 +12,35 @@
     border: 1px solid black;
 }
 
+.cab-unificada {
+    border-collapse: collapse;
+}
+
+.cab-unificada th {
+    background-color: black;
+    color: white;
+}
+
+.rayada tr:nth-of-type(even){
+    background-color:orange;
+    color:black;
+}
+
+.rayada tr:nth-of-type(odd){
+    background-color:grey;
+    color:blue;
+}
+
+.select-2 tr:nth-child(3) {
+    color:green;
+}
+
+.totalizar tr:last-child td:last-child {
+    font-weight:bolder;
+    color:red;
+}
+
+/* Maquetación mensajes de Outlook*/
 .tabla-maqueta {
     text-align: center;
     width:100%;
