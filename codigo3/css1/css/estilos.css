@@ -3,14 +3,38 @@
 
 body {
     font-family: Tahoma, Verdana;
+    font-size: 12px;
+    background: url('../img/fondo.gif');
 }
 
+p, ul, form {
+    margin:0;
+    padding:0;
+}
+
+/* Pruebas */
+.rojo {
+    color:red;
+}
+
+/**********************/
 
 #contenedor {
     width: 700px;
     margin: 20px auto;
-    border: 1px solid black;
-    text-align: center;
+    border: 1px solid grey;
+    /*text-align: center;*/
+    background-color: #efefef;
+}
+
+header nav {
+    background-image: url('../img/fondonav.gif');
+    background-repeat: repeat-x;
+    padding-left: 3px;
+}
+
+header a {
+    color: black;
 }
 
 @media (min-width:576px){
@@ -29,6 +53,32 @@ section {
 aside {
     /*float:right;*/
     width: 30%;
+    padding: 5px;
+}
+
+form {
+    padding:2px;
+}
+
+form label {
+    color:rgb(135, 135, 233);
+}
+
+footer a {
+    color: blue;
+}
+
+input[name="buscar"] {
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:HOVER {
+    text-decoration: underline;
 }
 
 /* Restaurar la forma de pintar del nave.*/
