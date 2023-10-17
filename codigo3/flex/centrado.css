@@ -1,0 +1,14 @@
+.contenedor-centrado {
+    display: flex;
+    justify-content:center; /* Centrar en hori. */
+    align-items: center; /* Centrado vertical */
+    height: 100vh; /* viewport height */
+}
+
+.contenedor-centrado div {
+    background-color: blue;
+    border: 1px solid black;
+    width: 25%;
+    height: 25%;
+    margin: 0 auto;
+}

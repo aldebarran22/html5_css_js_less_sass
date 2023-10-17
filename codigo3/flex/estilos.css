@@ -31,3 +31,20 @@ header {
     flex-direction: column-reverse;
     gap:5px;
 }
+
+.contenedor2 {
+    margin:50px auto;
+    width:40%;
+    border:1px solid grey;
+}
+
+#parrafos {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+#parrafos p {
+    width:20%; 
+    border:1px solid black;   
+}

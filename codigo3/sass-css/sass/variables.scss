@@ -1,0 +1,21 @@
+// Prueba con variables:
+
+$color: red;
+$fondo: grey;
+$tam: 12px;
+$index:3;
+$prop:color;
+
+h1 {
+    color: $color;
+    font-size:$tam * 2;
+}
+
+h#{$index}{
+    background-color: $fondo;
+}
+
+h4 {
+    #{$prop}:blue;
+    background-#{$prop}:$color;
+}
