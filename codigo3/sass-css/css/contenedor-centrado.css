@@ -1,25 +1,57 @@
-#contenedor-px {
-  /* Colocar un contenedor centrado */
+.container-100px {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border: 2px solid red;
   left: 50%;
   top: 50%;
-  margin-top: -100px;
-  margin-left: -100px;
+  margin-top: -50px;
+  margin-left: -50px;
 }
 
-#contenedor-porc {
-  /* Colocar un contenedor centrado */
+.container-500px {
   position: absolute;
-  width: 50%;
-  height: 50%;
-  border: 2px solid blue;
+  width: 500px;
+  height: 500px;
+  border: 2px solid red;
   left: 50%;
   top: 50%;
-  margin-top: -25%;
-  margin-left: -25%;
+  margin-top: -250px;
+  margin-left: -250px;
 }
+
+.container-1000px {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  border: 2px solid red;
+  left: 50%;
+  top: 50%;
+  margin-top: -500px;
+  margin-left: -500px;
+}
+
+/*
+#contenedor-px {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+}*/
+/*
+#contenedor-porc {
+    position: absolute;
+    width: 50%;
+    height:50%;
+    border: 2px solid blue;
+    left: 50%;
+    top: 50%;
+    margin-top: -25%;
+    margin-left: -25%;
+}*/
 
 /*# sourceMappingURL=contenedor-centrado.css.map */

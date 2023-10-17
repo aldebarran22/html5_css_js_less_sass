@@ -1,8 +1,33 @@
 // Mixin para generar un contenedor centrado y absoluto
 // de unas dimensiones específicas:
 
+@use 'sass:math';
+
+@function calcularMargen($size){
+    @return -1 * math.div($size, 2);
+}
+
+@mixin contenedor($clase, $w:100px, $h:100px){
+
+    .#{$clase}{
+        position: absolute;  
+        width: $w;
+        height: $h;
+        border: 2px solid red;
+        left: 50%;
+        top: 50%;
+        margin-top: calcularMargen($h);
+        margin-left: calcularMargen($w);
+    }
+}
+
+$tam: 100px 500px 1000px;
+@each $i in $tam {
+    @include contenedor(container-#{$i}, $i, $i);
+}
+
+/*
 #contenedor-px {
-    /* Colocar un contenedor centrado */
     position: absolute;
     width: 200px;
     height: 200px;
@@ -11,10 +36,10 @@
     top: 50%;
     margin-top: -100px;
     margin-left: -100px;
-}
+}*/
 
+/*
 #contenedor-porc {
-    /* Colocar un contenedor centrado */
     position: absolute;
     width: 50%;
     height:50%;
@@ -23,4 +48,4 @@
     top: 50%;
     margin-top: -25%;
     margin-left: -25%;
-}
+}*/
