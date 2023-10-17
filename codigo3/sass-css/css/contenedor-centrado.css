@@ -1,0 +1,25 @@
+#contenedor-px {
+  /* Colocar un contenedor centrado */
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid red;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+
+#contenedor-porc {
+  /* Colocar un contenedor centrado */
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border: 2px solid blue;
+  left: 50%;
+  top: 50%;
+  margin-top: -25%;
+  margin-left: -25%;
+}
+
+/*# sourceMappingURL=contenedor-centrado.css.map */

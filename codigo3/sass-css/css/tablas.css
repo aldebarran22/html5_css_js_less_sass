@@ -8,6 +8,12 @@
   background-color: orange;
   color: black;
 }
+.table-1 tr:nth-of-type(even) {
+  background-color: grey;
+}
+.table-1 tr:nth-of-type(odd) {
+  background-color: white;
+}
 .table-1 th, .table-1 td {
   border: 1px solid black;
 }

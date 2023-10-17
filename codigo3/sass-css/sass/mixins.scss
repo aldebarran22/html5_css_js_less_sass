@@ -12,6 +12,17 @@
     margin-top: $mt;
 }
 
+@mixin propiedadEti($propiedad, $valor, $selectores ...){
+    @each $s in $selectores {
+        #{$s}{
+            #{$propiedad}:$valor;
+        }
+    }
+}
+
+/* lista de etiquetas con color rojo */
+@include propiedadEti(color, red, h1, h2, div, p, ul);
+
 table, form {
     @include centrar;
 }

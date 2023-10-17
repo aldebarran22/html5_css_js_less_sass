@@ -1,0 +1,48 @@
+/* lista de etiquetas con color rojo */
+h1 {
+  color: red;
+}
+
+h2 {
+  color: red;
+}
+
+div {
+  color: red;
+}
+
+p {
+  color: red;
+}
+
+ul {
+  color: red;
+}
+
+table, form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor-100 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  margin-top: 0px;
+}
+
+.contenedor-200 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-top: 0px;
+}
+
+.contenedor-300 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  margin-top: 0px;
+}
+
+/*# sourceMappingURL=mixins.css.map */
