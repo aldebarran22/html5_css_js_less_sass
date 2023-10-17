@@ -1,0 +1,42 @@
+@use 'modulos/colores' with (
+    $primary: rgb(34,34,255)
+);
+
+$w:200px;
+$h: 200px;
+$tipo-letra: Verdana;
+
+button {
+    background-color: colores.$primary;
+    color:colores.$secondary;
+}
+
+div {
+    width:$w;
+    height:$h;
+
+    // Modificar las vars. globales
+    $w:100px !global;
+    $h:100px !global;
+
+    // Esta var. tiene un ámbito local
+    $tipo-letra: Tahoma;
+
+    p {
+        font-family: $tipo_letra;        
+    }
+}
+@debug 'fuera de las reglas';
+
+.contenedor {
+    @debug 'Dentro de .contenedor: w: #{$w}, h:#{$h}';
+    width:$w;
+    height:$h;
+}
+
+span {
+    font-family: $tipo_letra;
+}
+
+
+

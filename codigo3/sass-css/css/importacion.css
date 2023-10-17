@@ -1,0 +1,23 @@
+button {
+  background-color: rgb(34, 34, 255);
+  color: black;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+div p {
+  font-family: Tahoma;
+}
+
+.contenedor {
+  width: 100px;
+  height: 100px;
+}
+
+span {
+  font-family: Verdana;
+}
+
+/*# sourceMappingURL=importacion.css.map */
