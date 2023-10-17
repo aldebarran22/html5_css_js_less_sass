@@ -10,7 +10,8 @@ $detalle-color-texto: black;
     margin-right: auto;
 }
 
-@mixin tablaCSS($centrar:false, $cab-unificada:false, $rayada:false){
+@mixin tablaCSS($centrar:false, $cab-unificada:false, 
+$rayada:false, $con-bordes:false, $totalizar:false){
 
     @if $centrar {
         @include centrar;
@@ -34,13 +35,24 @@ $detalle-color-texto: black;
             background-color: $detalle-color-odd;
         }
     }
+
+    @if $con-bordes {
+        border: 1px solid black;
+        th, td {
+            border: 1px solid black;
+        }
+    }
+
+    @if $totalizar {
+        tr:last-child {
+            font-weight: 900;
+            color:red;
+        }
+    }
 }
 
 .table-1 {
-    @include tablaCSS($centrar:true, $cab-unificada:true, $rayada:true);
+    @include tablaCSS($centrar:true, $con-bordes:true, 
+    $rayada:true, $cab-unificada:true, $totalizar:true);
 }
 
-/*
-.table-2 {
-    @include tablaCSS($bordes:true, $rayada:true);
-}*/
