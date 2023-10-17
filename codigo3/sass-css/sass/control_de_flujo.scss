@@ -1,0 +1,42 @@
+// Control de flujo
+
+$centrado:true;
+$w:200px;
+$h:200px;
+$cabs:true;
+
+div {
+    width: $w;
+    height: $h;
+
+    @if $centrado {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@if $cabs {
+
+    h1 {
+        color:red;
+    }
+
+    h2 {
+        color:blue;
+    }
+}
+@else {
+    p {
+        color:orange;
+    }
+}
+
+// Generar encabezados:
+$fw:100;
+@for $i from 6 through 1 {
+
+    h#{$i}{
+        color:red;
+        font-weight: 1000 - ($fw*$i);
+    }
+}

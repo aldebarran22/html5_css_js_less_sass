@@ -1,0 +1,19 @@
+@use 'sass:list';
+
+// Bucles y listas
+
+$porcentaje: 50%;
+$colores: red yellow green orange blue black;
+$medidas: width height;
+
+// Generar los 6 encabezados con un color cada uno:
+@for $i from 1 through 6 {
+    h#{$i}{
+        color: list.nth($colores, $i);
+
+        @each $m in $medidas {
+            #{$m}: $porcentaje;
+        }
+    }
+}
+

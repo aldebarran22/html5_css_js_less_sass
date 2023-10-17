@@ -1,0 +1,46 @@
+div {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: red;
+}
+
+h2 {
+  color: blue;
+}
+
+h6 {
+  color: red;
+  font-weight: 400;
+}
+
+h5 {
+  color: red;
+  font-weight: 500;
+}
+
+h4 {
+  color: red;
+  font-weight: 600;
+}
+
+h3 {
+  color: red;
+  font-weight: 700;
+}
+
+h2 {
+  color: red;
+  font-weight: 800;
+}
+
+h1 {
+  color: red;
+  font-weight: 900;
+}
+
+/*# sourceMappingURL=control_de_flujo.css.map */
