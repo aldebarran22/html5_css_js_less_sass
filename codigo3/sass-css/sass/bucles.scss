@@ -1,4 +1,5 @@
 @use 'sass:list';
+@use 'sass:map';
 
 // Bucles y listas
 
@@ -16,4 +17,42 @@ $medidas: width height;
         }
     }
 }
+
+// Definir un mapa de mapa:
+// etiquetaHTML: prop1 -> valor1, 
+// Generar las reglas a partir de un mapa
+
+// Lista de etiquetas HTML
+$etiquetas: p span input ul ol form;
+
+// Mapa de propiedades:
+$propiedades:
+(
+    "p": ("color":red, "background-color":black),
+    "input": ("border": 1px solid black),
+    "ul":("background-color":blue)
+);
+
+@each $etiqueta in $etiquetas {
+
+    #{$etiqueta}{
+        padding:0;
+        margin:0;
+
+        @if map.has-key($propiedades, $etiqueta){
+
+            @each $p, $v in map.get($propiedades, $etiqueta){
+                #{$p}:$v;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
