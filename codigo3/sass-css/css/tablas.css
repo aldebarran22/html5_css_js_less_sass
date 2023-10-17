@@ -1,0 +1,19 @@
+.table-1 {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+.table-1 th {
+  background-color: orange;
+  color: black;
+}
+.table-1 th, .table-1 td {
+  border: 1px solid black;
+}
+.table-1 tr:last-child {
+  font-weight: 900;
+  color: red;
+}
+
+/*# sourceMappingURL=tablas.css.map */
