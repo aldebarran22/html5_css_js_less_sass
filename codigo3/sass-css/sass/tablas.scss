@@ -1,0 +1,46 @@
+
+$cab-color-fondo: orange;
+$cab-color-texto: black;
+$detalle-color-even: grey;
+$detalle-color-odd: white;
+$detalle-color-texto: black;
+
+@mixin centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin tablaCSS($centrar:false, $cab-unificada:false, $rayada:false){
+
+    @if $centrar {
+        @include centrar;
+    }
+
+    @if $cab-unificada {
+        border-collapse: collapse;
+
+        th {
+            background-color: $cab-color-fondo;
+            color: $cab-color-texto;
+        }        
+    }
+
+    @if $rayada {
+        tr:nth-of-type(even){
+            background-color: $detalle-color-even;
+        }
+
+        tr:nth-of-type(odd){
+            background-color: $detalle-color-odd;
+        }
+    }
+}
+
+.table-1 {
+    @include tablaCSS($centrar:true, $cab-unificada:true, $rayada:true);
+}
+
+/*
+.table-2 {
+    @include tablaCSS($bordes:true, $rayada:true);
+}*/
