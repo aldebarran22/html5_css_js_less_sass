@@ -1,0 +1,44 @@
+// Pruebas con herencia: simple y múltiple
+
+// H. Simple:
+
+.centrar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contenedor1 {
+    @extend .centrar;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.contenedor2 {
+    @extend .contenedor1;
+    width:60%;
+    border: 1px solid black;
+}
+
+/* H. multiple:*/
+
+.fuente {
+    font-family: Tahoma;
+    font-size: 20px;
+}
+
+.fuente2 {
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.colores {
+    color:red;
+    background-color: #fff;
+}
+
+.colores-fuente {
+    // No afecta el orden, lo toma
+    // de la posición que ocupa
+    // cada regla en el fichero:
+    @extend  .fuente, .fuente2, .colores;
+}
