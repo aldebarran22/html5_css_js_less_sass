@@ -1,0 +1,16 @@
+header, footer {
+  background-color: #fff;
+  height: 150px;
+}
+header nav, footer nav {
+  background-color: #efefef;
+  border-top: 1px solid grey;
+}
+header nav a, footer nav a {
+  text-decoration: none;
+}
+header nav a:hover, footer nav a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=anidamientos.css.map */

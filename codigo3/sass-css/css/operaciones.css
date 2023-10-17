@@ -1,0 +1,28 @@
+:root {
+  --size:50%;
+}
+
+p {
+  font-size: var(--size);
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 10px;
+}
+
+div {
+  width: 50%;
+  height: 150%;
+  top: 75%;
+  left: 30%;
+}
+
+/*# sourceMappingURL=operaciones.css.map */

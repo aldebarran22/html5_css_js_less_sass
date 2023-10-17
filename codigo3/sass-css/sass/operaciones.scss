@@ -1,0 +1,39 @@
+// Operaciones con variables de  SASS
+
+$tam1: 20px;
+$tam2: 2px;
+$tam3: 50%;
+$tam4: 10cm;
+
+:root {
+    // OJO hay que interpolar si no pone: --size:$tam3;
+    --size:#{$tam3};
+}
+
+p {
+    font-size: var(--size);
+}
+
+h1 {
+    font-size: $tam1 * 2;    
+}
+
+h2 {
+    font-size: $tam1 + $tam2;
+    // No mul. dos vars con uds:
+    //font-size: $tam1 * $tam2;
+}
+
+h3 {
+    // Dividir con uds -> ok pero quita uds
+    font-size: ($tam1 / $tam2)*1px;
+}
+
+// Sumas y Restas ok entre dos vars con uds
+
+div {
+    width: $tam3;
+    height: $tam3 * 3;
+    top: $tam3 + 25%;   
+    left: $tam3 - 20%; 
+}
