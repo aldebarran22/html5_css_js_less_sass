@@ -1,0 +1,31 @@
+h1 {
+  font-size: 6px;
+  color: rgb(25, 0, 0);
+}
+
+h2 {
+  font-size: 12px;
+  color: rgb(68, 0, 0);
+}
+
+h3 {
+  font-size: 18px;
+  color: rgb(111, 0, 0);
+}
+
+h4 {
+  font-size: 24px;
+  color: rgb(154, 0, 0);
+}
+
+h5 {
+  font-size: 30px;
+  color: rgb(197, 0, 0);
+}
+
+h6 {
+  font-size: 36px;
+  color: rgb(240, 0, 0);
+}
+
+/*# sourceMappingURL=while.css.map */

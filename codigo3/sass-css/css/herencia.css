@@ -1,0 +1,32 @@
+.centrar, .contenedor1, .contenedor2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor1, .contenedor2 {
+  border-radius: 5px;
+  width: 90%;
+}
+
+.contenedor2 {
+  width: 60%;
+  border: 1px solid black;
+}
+
+/* H. multiple:*/
+.fuente, .colores-fuente {
+  font-family: Tahoma;
+  font-size: 20px;
+}
+
+.fuente2, .colores-fuente {
+  font-family: Verdana;
+  font-size: 12px;
+}
+
+.colores, .colores-fuente {
+  color: red;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=herencia.css.map */

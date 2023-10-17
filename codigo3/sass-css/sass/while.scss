@@ -1,0 +1,18 @@
+// Ejemplo de bucle While
+@use 'sass:math';
+
+$color:25;
+$paso: math.ceil(255 / 6);
+$i: 1;
+$fin: 6;
+
+@while $i <= $fin {
+
+    h#{$i}{
+        font-size: $i * $fin * 1px;
+        color: rgb($color, 0, 0);
+    }
+
+    $i: $i+1;
+    $color:$color+$paso;
+}
