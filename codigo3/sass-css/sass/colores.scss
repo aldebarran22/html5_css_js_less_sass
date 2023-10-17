@@ -1,0 +1,10 @@
+// Pruebas con colores:
+
+@use 'sass:color';
+
+$color-test: #adef31;
+$rojo:color.red($color-test);
+
+h1 {
+    color: color.change($color-test, $red:$rojo+20);
+}

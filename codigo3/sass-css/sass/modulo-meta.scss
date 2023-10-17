@@ -1,0 +1,9 @@
+@use 'sass:meta';
+
+$var: 100px;
+$porc: 50%;
+$c: red;
+
+@debug 'Tipo de var', meta.type-of($var);
+@debug 'Tipo de porc', meta.type-of($porc);
+@debug 'Tipo de c', meta.type-of($c);
