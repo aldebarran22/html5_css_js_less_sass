@@ -50,3 +50,28 @@ console.log(may10);
 // (n)=>{}
 const min10 = numeros.filter((n) => n < 10);
 console.log(min10);
+
+// Desestructuración de Arrays:
+const array2 = ["hola", 234, true, "otro"];
+const [saludo, , , cadena] = array2;
+console.log(saludo, cadena);
+
+const numeros2 = [2, 3, 4, 5, 11, 77, 44];
+const n2 = numeros2.map((n) => n * 10);
+console.log(n2);
+
+const copia2 = [];
+numeros2.forEach((n) => copia2.push(n));
+console.log(numeros2);
+
+// Buscar elementos en un array:
+const resul2 = numeros2.includes(5);
+console.log(resul2);
+if (resul2) {
+  // Obtener la posición que ocupa el 5:
+  const indice = numeros2.findIndex((n) => n === 5);
+  console.log(indice);
+}
+
+//console.log("5" == 5); -> true
+//console.log("5" === 5); -> false
