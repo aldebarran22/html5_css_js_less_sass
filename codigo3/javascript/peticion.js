@@ -1,4 +1,5 @@
 const url = "https://api.imgflip.com/get_memes";
+const url2 = "https://jsonplaceholder.typicode.com/comments";
 
 const procesarMemes = (memes) => {
   console.log("Memes descargados: ", memes.length);
@@ -33,4 +34,15 @@ const getMemes = () => {
     .finally(() => console.log("Petición realizada ..."));
 };
 
-getMemes();
+const medirTiempo = async () => {
+  const ini = performance.now();
+
+  const respuesta = await fetch(url2);
+  const resul = await respuesta.json();
+
+  const fin = performance.now();
+  console.log(`Tiempo: ${fin - ini} mlsg`);
+};
+
+//getMemes();
+medirTiempo();
