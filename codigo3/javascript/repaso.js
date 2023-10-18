@@ -25,3 +25,28 @@ console.log(str_json.length + " chars");
 console.log(str_json);
 const array = JSON.parse(str_json);
 console.log("Número de objetos: " + array.length);
+
+// Bucle:
+for (const o of array) {
+  console.log(o);
+}
+
+// borrar propiedades de un objeto:
+const user = { nombre: "Eva", edad: 32, tno: 688696955 };
+delete user.tno;
+console.log(user);
+
+// Agrupar objetos:
+const contacto = { email: "web@gmail.com", movil: 66733445 };
+const todo = { user, contacto };
+console.log(todo.user.nombre + " " + todo.contacto.movil);
+
+// Filtrar arrays:
+const numeros = [2, 3, 4, 5, 11, 77, 44];
+const may10 = numeros.filter(function (n) {
+  return n > 10;
+});
+console.log(may10);
+// (n)=>{}
+const min10 = numeros.filter((n) => n < 10);
+console.log(min10);
