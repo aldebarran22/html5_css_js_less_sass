@@ -1,0 +1,36 @@
+h1 {
+  color: #e69500;
+  background-color: #0051e6;
+}
+h2 {
+  color: #cc8400;
+  background-color: #0048cc;
+}
+h3 {
+  color: #b37300;
+  background-color: #003fb3;
+}
+h4 {
+  color: #996300;
+  background-color: #003699;
+}
+h5 {
+  color: #805300;
+  background-color: #002d80;
+}
+h6 {
+  color: #664200;
+  background-color: #002466;
+}
+p {
+  color: red;
+  padding: 1.5rem;
+}
+input {
+  color: blue;
+  padding: 1.5rem;
+}
+span {
+  color: green;
+  padding: 1.5rem;
+}

@@ -1,0 +1,28 @@
+
+// Funciones basadas en colores:
+
+@color-base:orange;
+
+// Iterador del 1 al 6 con incremento de 1:
+each(range(1,6), {
+
+    h@{value}{
+        color: darken(@color-base, @value*5);
+        background-color:spin(darken(@color-base, @value*5),180);
+    }
+});
+
+// Bucle a partir de una lista:
+// Las listas pueden clave num (por la posición), o con clave.
+@lista: {p:red; input:blue; span: green};
+@padding: 1.5rem;
+// La lista proporciona: @key: la clave definida
+// @value: el valor de la clave, @index: la posición de elemento.
+
+each(@lista, {
+
+    @{key}{
+        color: @value;
+        padding: if((ispixel(@padding)), (@padding * @index), @padding);
+    }
+});

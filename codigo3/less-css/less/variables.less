@@ -1,0 +1,19 @@
+// Ejemplo de variables en LESS
+
+/* Reglas */
+@size: 12px;
+@width: 25%;
+@height: 300;
+@color: blue;
+@tam: 0.2;
+
+h1 {
+    // Mul con dos vars. con uds -> ok!
+    font-size: @size * 2px;
+    width: @width * 2%;
+    height: (@height / 2) * 1px;
+    top: 20% + @width;
+    margin: percentage(@tam);
+}
+
+
