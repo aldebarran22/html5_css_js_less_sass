@@ -7,3 +7,21 @@ ul {
     }
 }
 
+// Generar una clase para cada tipo de botón:
+// info, success, alert y error
+
+@lista: {
+    btn-alert: @alertcolor;
+    btn-success: @successcolor;
+    btn-info: @infocolor;
+    btn-error: @errorcolor;
+};
+
+each(@lista, {
+
+    .@{key}{
+        .boton(@value);
+    }
+});
+
+
