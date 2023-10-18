@@ -1,0 +1,25 @@
+.vertical(@color-ini:@basecolor, @color-fin:compcolor){
+    // Generar un degradado de un color inicial a un color final
+    background: linear-gradient(to left top, @color-ini, @color-fin);
+
+    // Si el navegador no soporta linear-gradient, 
+    background-color: @color-ini;
+}
+
+.boton(@tipo: @botonbg){
+    .vertical(@tipo, darken(@tipo, 30));
+
+    // Borde del boton:
+    border:1px solid @botonborde;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.35);
+
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    height: 25px;
+    list-style:none;
+    text-decoration: none;
+    vertical-align: middle;
+    padding: 0 2rem;
+    cursor: pointer;
+}
