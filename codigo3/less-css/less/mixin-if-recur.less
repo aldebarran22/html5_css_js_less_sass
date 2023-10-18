@@ -1,0 +1,39 @@
+
+// Inyectar reglas a partir de una condición:
+
+/* Mixins cond. */
+@fuentes: false;
+
+.if(@size:12px) when (@fuentes) {
+
+    .fuentes-texto {
+        font-size:@size;
+        font-family: serif;
+    }
+}
+
+.if(24px);
+
+/* Mixin recursivos: */
+@columnas: 12;
+
+.columna(@n){
+    width: @n * (100% / @columnas);
+}
+
+// Generar clases de .col-1 a .col-12
+.grid(@i) when (@i <= @columnas) {
+
+    .col-@{i}{
+        .columna(@i);
+        float:left;
+        border: 1px solid black;
+        box-sizing: border-box;
+        padding: 0 5px;       
+    }
+
+    .grid(@i+1);
+}
+
+.grid(1);
+

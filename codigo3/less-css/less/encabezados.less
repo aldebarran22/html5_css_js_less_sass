@@ -26,3 +26,11 @@ each(@lista, {
         padding: if((ispixel(@padding)), (@padding * @index), @padding);
     }
 });
+
+@props: div, header, footer;
+each(@props, {
+
+    @{value}{
+        color:red;
+    }
+});

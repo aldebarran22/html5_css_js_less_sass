@@ -34,3 +34,12 @@ span {
   color: green;
   padding: 1.5rem;
 }
+div {
+  color: red;
+}
+header {
+  color: red;
+}
+footer {
+  color: red;
+}
