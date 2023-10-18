@@ -75,3 +75,20 @@ if (resul2) {
 
 //console.log("5" == 5); -> true
 //console.log("5" === 5); -> false
+
+console.log(
+  "some > 5: ",
+  numeros2.some((n) => n > 5)
+);
+let i = 3;
+console.log(
+  `every > ${i}: `,
+  numeros2.every((n) => n > i)
+);
+
+const alum = { nombre: "Javier" };
+setTimeout(() => {
+  alum.examen = { test: 9 };
+  console.log("Nota test in: " + alum.examen?.test);
+}, 3000);
+console.log("Nota test out: " + alum.examen?.test);
