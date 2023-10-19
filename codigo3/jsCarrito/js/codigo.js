@@ -58,6 +58,7 @@ const cargarCarrito = () => {
     carrito = [];
   } else {
     carrito = JSON.parse(str);
+    mostrarCarrito();
   }
 };
 
@@ -98,6 +99,11 @@ addEventListener("load", () => {
       copia["cantidad"] = cantidad.value;
       carrito.push(copia);
       mostrarCarrito();
+
+      // Limpieza
+      cantidad.value = 1;
+      capaDestino.innerHTML = "comprar";
+      indexSeleccionado = -1;
     }
   });
 });
