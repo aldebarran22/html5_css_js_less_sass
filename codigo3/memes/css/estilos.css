@@ -1,3 +1,18 @@
+#contenedor {
+  width: 100%;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  padding: 0 10px;  
+}
+
+header div {
+  display:flex;
+  align-items: center;
+}
+
 .col-1 {
   width: 6.25%;
   margin: 0 1.04166667%;

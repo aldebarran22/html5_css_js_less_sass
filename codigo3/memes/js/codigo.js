@@ -1,10 +1,22 @@
 const url = "https://api.imgflip.com/get_memes";
 
+
+const clasePorDefecto = "col-4";
+const opciones = new Map([
+    ['col-12',1],
+    ['col-6',2],
+    ['col-4',3],
+    ['col-3',4]
+]);
+
+
 const procesarMemes = (memes) => {
-  console.log("Memes descargados: ", memes.length);
+    let h1 = document.querySelector("header h1");
+    h1.innerHTML = `Lista de Memes (${memes.length})`;
+  /*
   for (const meme of memes) {
     console.log(meme.url);
-  }
+  }*/
 };
 
 const getMemes = () => {
@@ -20,3 +32,9 @@ const getMemes = () => {
     .catch((err) => console.error(err))
     .finally(() => console.log("Petición realizada ..."));
 };
+
+
+addEventListener("load", ()=>{
+   getMemes(); 
+
+});
