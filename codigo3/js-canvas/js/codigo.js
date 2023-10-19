@@ -25,10 +25,24 @@ const test1 = (context) => {
   context.stroke();
 };
 
+const test2 = (context) => {
+  // Prueba con circulos:
+  context.beginPath();
+  let radio = 150;
+  for (let i = 0; i < 5; i++) {
+    context.arc(150, 150, radio, 0, Math.PI * 2, true);
+    radio -= 25;
+  }
+
+  //context.closePath();
+  context.stroke();
+};
+
 addEventListener("load", () => {
   // Capturar el contexto del Canvas:
   let canvas = document.getElementById("canvas");
   let context = canvas.getContext("2d");
 
-  test1(context);
+  //test1(context);
+  test2(context);
 });
