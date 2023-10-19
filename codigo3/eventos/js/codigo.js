@@ -39,5 +39,17 @@ addEventListener("load", () => {
   });
   capa2.addEventListener("mouseout", (e) => {
     capa2.style.border = "2px solid black";
+    texto.value = "";
   });
+  capa2.addEventListener("mousemove", (e) => {
+    texto.value = e.clientX + ", " + e.clientY;
+  });
+
+  let parrafos = document.getElementsByTagName("p");
+  for (let p of parrafos) {
+    p.addEventListener("click", (e) => {
+      e.target.style.color = "red";
+      console.log(e.target.textContent);
+    });
+  }
 });
