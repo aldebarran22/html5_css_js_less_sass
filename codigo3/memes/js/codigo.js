@@ -33,8 +33,9 @@ const procesarMemes = (memes) => {
     img.src = meme.url;
     img.height = 150;
     img.title = meme.name;
-
-    let txtFigureCap = document.createTextNode(meme.name);
+    let titulo =
+      meme.name.length > 12 ? meme.name.substr(0, 12) + "..." : meme.name;
+    let txtFigureCap = document.createTextNode(titulo);
     figureCap.appendChild(txtFigureCap);
     figure.appendChild(img);
     figure.appendChild(figureCap);
@@ -61,6 +62,12 @@ addEventListener("load", () => {
   let combo = document.querySelector("#numMemes");
   cargaCombo(combo);
   combo.selectedIndex = opciones.get(clasePorDefecto) - 1;
-  combo.addEventListener("change", () => {});
+  combo.addEventListener("change", () => {
+    const nombreClase = combo.options[combo.selectedIndex].value;
+    let capasImg = document.querySelectorAll("#fotos div");
+    for (let capa of capasImg) {
+      capa.className = nombreClase;
+    }
+  });
   getMemes();
 });
