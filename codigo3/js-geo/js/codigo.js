@@ -27,6 +27,8 @@ addEventListener("load", () => {
         let info = fecha.toString() + "<br>";
         info += "Latitud: " + convertir(lat, "lat") + "<br>";
         info += "Longitud: " + convertir(lon, "lon") + "<br>";
+        info += "Altitud: " + ubicacion.coords.altitude + "<br>";
+        info += "Accuracy: " + ubicacion.coords.accuracy + "<br>";
         mostrarInfo(contenedor, info, "blue");
 
         const enlace = document.querySelector("#map-link");
@@ -34,7 +36,8 @@ addEventListener("load", () => {
       },
       (error) => {
         mostrarInfo(contenedor, error.message, "red");
-      }
+      },
+      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
     );
   });
 });
