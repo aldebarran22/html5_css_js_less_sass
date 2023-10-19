@@ -9,6 +9,7 @@ let carrito = [];
 let capaCarrito;
 let capaAlmacen;
 let capaDestino;
+let indexSeleccionado = -1;
 
 const mostrarAlmacen = () => {
   for (let i = 0; i < productos.length; i++) {
@@ -40,7 +41,13 @@ const configurarEventosDragDrop = () => {
 
   capaDestino.addEventListener("drop", (e) => {
     let index = new Number(e.dataTransfer.getData("Text"));
-    console.log("index: " + index);
+    indexSeleccionado = index;
+    let pathImg = productos[index].img;
+    capaDestino.innerHTML = "";
+    let imagen = new Image();
+    imagen.src = pathImg;
+    imagen.width = 75;
+    capaDestino.appendChild(imagen);
   });
 };
 
@@ -58,9 +65,6 @@ addEventListener("load", () => {
   capaDestino = document.getElementById("destino");
 
   mostrarAlmacen();
-
-  // Registrar eventos: drap and drop
-
   configurarEventosDragDrop();
   mostrarCarrito();
 });
