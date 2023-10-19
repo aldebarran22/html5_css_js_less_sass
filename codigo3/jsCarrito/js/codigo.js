@@ -51,10 +51,29 @@ const configurarEventosDragDrop = () => {
   });
 };
 
-const mostrarCarrito = () => {
+const cargarCarrito = () => {
   let str = localStorage.getItem("carrito");
   if (str == null) {
     capaCarrito.innerHTML = "<h4>No hay productos en el carrito</h4>";
+    carrito = [];
+  } else {
+    carrito = JSON.parse(str);
+  }
+};
+
+const mostrarCarrito = () => {
+  if (carrito.length == 0) {
+    capaCarrito.innerHTML = "<h4>No hay productos en el carrito</h4>";
+  } else {
+    // Grabar carrito
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    // mostrar carrito
+    let total = 0;
+    for (let p of carrito) {
+      total += p.precio * p.cantidad;
+    }
+    capaCarrito.innerHTML = `<h4>Importe carrito: ${total} &euro;</h4>`;
   }
 };
 
@@ -66,5 +85,19 @@ addEventListener("load", () => {
 
   mostrarAlmacen();
   configurarEventosDragDrop();
-  mostrarCarrito();
+  cargarCarrito();
+
+  let botonCompra = document.getElementById("botonCompra");
+  botonCompra.addEventListener("click", () => {
+    if (indexSeleccionado == -1) {
+      alert("Tiene que seleccionar un producto");
+    } else {
+      let producto = productos[indexSeleccionado];
+      let cantidad = document.querySelector("#cantidad");
+      const { ...copia } = producto;
+      copia["cantidad"] = cantidad.value;
+      carrito.push(copia);
+      mostrarCarrito();
+    }
+  });
 });
