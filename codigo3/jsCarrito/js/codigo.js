@@ -8,13 +8,18 @@ const productos = [
 let carrito = [];
 let capaCarrito;
 let capaAlmacen;
+let capaDestino;
 
 const mostrarAlmacen = () => {
-  for (const p of productos) {
+  for (let i = 0; i < productos.length; i++) {
+    let p = productos[i];
     let div = document.createElement("div");
     let img = new Image();
     img.src = p.img;
     img.width = 75;
+    img.addEventListener("dragstart", (e) => {
+      e.dataTransfer.setData("Text", i + "");
+    });
     div.appendChild(img);
     let parrafo = document.createElement("p");
     let titulo = p.nombre + " " + p.precio + "€";
@@ -24,7 +29,20 @@ const mostrarAlmacen = () => {
   }
 };
 
-const configurarEventosDragDrop = () => {};
+const configurarEventosDragDrop = () => {
+  const eventosD = ["dragenter", "dragover", "drop"];
+  for (let nombre of eventosD) {
+    capaDestino.addEventListener(nombre, (event) => {
+      // Cancela el comportamiento por defecto
+      event.preventDefault();
+    });
+  }
+
+  capaDestino.addEventListener("drop", (e) => {
+    let index = new Number(e.dataTransfer.getData("Text"));
+    console.log("index: " + index);
+  });
+};
 
 const mostrarCarrito = () => {
   let str = localStorage.getItem("carrito");
@@ -37,6 +55,7 @@ addEventListener("load", () => {
   // Capturar los controles:
   capaCarrito = document.getElementById("carrito");
   capaAlmacen = document.getElementById("almacen");
+  capaDestino = document.getElementById("destino");
 
   mostrarAlmacen();
 
