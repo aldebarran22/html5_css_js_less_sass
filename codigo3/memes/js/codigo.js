@@ -8,6 +8,17 @@ const opciones = new Map([
   ["col-3", 4],
 ]);
 
+const cargaCombo = (combo) => {
+  let opcion;
+
+  opciones.forEach((value, key) => {
+    opcion = document.createElement("option");
+    opcion.value = key;
+    opcion.appendChild(document.createTextNode(value));
+    combo.appendChild(opcion);
+  });
+};
+
 const procesarMemes = (memes) => {
   let capaFotos = document.querySelector("#fotos");
   let h1 = document.querySelector("header h1");
@@ -47,5 +58,9 @@ const getMemes = () => {
 };
 
 addEventListener("load", () => {
+  let combo = document.querySelector("#numMemes");
+  cargaCombo(combo);
+  combo.selectedIndex = opciones.get(clasePorDefecto) - 1;
+  combo.addEventListener("change", () => {});
   getMemes();
 });
