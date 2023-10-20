@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/codigo.js"></script>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+
+        #contenedor {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>WebSockets - Aplicación Cliente</h3>
+    <div>
+        <button type="button" id="conectar">Conectar</button>
+        <button type="button" id="desconectar">Desconectar</button>
+    </div>
+    <label for="usuarios">Destinatario:</label>
+    <select name="usuarios" id="usuarios">
+        <option value="*">Todos</option>
+    </select><br>
+    <label for="texto">Texto a enviar</label>
+    <input type="text" name="texto" id="texto" placeholder="escribe un mensaje">
+    <p>Respuestas del servidor</p>
+    <div id="contenedor"></div>
+</body>
+
+</html>
