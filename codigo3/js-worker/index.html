@@ -5,14 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/principal.js"></script>
+    <script type="text/javascript">
+        addEventListener("load", () => {
+            let capa = document.getElementById("contenedor");
+            let fichero1 = document.getElementById("fichero1");
+            let fichero2 = document.getElementById("fichero2");
+
+
+            // Crear el worker:
+            let worker = new Worker("./js/hilo.js");
+            let worker2 = new Worker("./js/hilo2.js");
+
+            worker.addEventListener("message", (e) => {
+                capa.innerHTML += e.data + "<br>";
+                capa.innerHTML += "<hr>"
+            });
+
+            worker2.addEventListener("message", (e) => {
+                capa.innerHTML += e.data + "<br>";
+                capa.innerHTML += "<hr>"
+            });
+
+            fichero1.addEventListener("change", (e)=>{
+                let fichero = e.target.files[0]
+                worker.postMessage(fichero);
+            })
+
+            fichero2.addEventListener("change", (e)=>{
+                let fichero = e.target.files[0]
+                worker2.postMessage(fichero);
+            })
+          
+
+            let boton2 = document.getElementById("boton2");
+            boton2.addEventListener("click", () => {
+                worker.terminate(); // Terminar el worker
+                worker2.terminate(); // Terminar el worker
+            });
+        });
+
+    </script>
 </head>
 
 <body>
     <form action="#">
-        <label for="mensaje">Mensaje</label>
-        <input type="text" id="mensaje" name="mensaje" placeholder="mensaje">
-        <button type="button" id="boton1">Enviar</button>
+        <label for="fichero1">Mensaje</label>
+        <input type="file" id="fichero1" name="fichero1"><br>
+        <label for="fichero2">Mensaje</label>
+        <input type="file" id="fichero2" name="fichero2"><br>
+        <!--<button type="button" id="boton1">Enviar</button>-->
         <button type="button" id="boton2">Terminate</button>
     </form>
     <h3>Contenido recibido</h3>

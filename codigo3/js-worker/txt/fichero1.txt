@@ -1,0 +1,6 @@
+Disponemos en el servidor de varios ficheros de texto. 
+El nombre de los ficheros los vamos a mostrar en un combo y 
+tendremos una capa donde visualizar el contenido del fichero 
+que seleccione el usuario, 
+la idea es hacer la peticion de cada fichero de forma 
+asincrona utilizando ajax.

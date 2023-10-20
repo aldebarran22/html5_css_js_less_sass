@@ -1,7 +1,18 @@
-console.log("Worker inicializado ...");
-onmessage = (e) => {
-  console.log(`Worker: ${e.data}`);
+function cargaFichero(fichero){
+    let reader = new FileReader();
+    reader.addEventListener('load', (e) =>{
+        // Enviar al hilo principal
+        postMessage(e.target.result)
+    })
+    reader.readAsText(fichero, 'iso-8859-1')
+}
 
-  // Mensaje de vuelta:
-  postMessage("Worker: " + e.data);
+console.log("Worker1 inicializado ...");
+
+
+onmessage = (e) => {
+  setTimeout(() => {
+    cargaFichero(e.data)
+  }, 15000)
+  
 };
