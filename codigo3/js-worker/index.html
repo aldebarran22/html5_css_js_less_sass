@@ -10,7 +10,7 @@
             let capa = document.getElementById("contenedor");
             let fichero1 = document.getElementById("fichero1");
             let fichero2 = document.getElementById("fichero2");
-
+            let fichero3 = document.getElementById("fichero3");
 
             // Crear el worker:
             let worker = new Worker("./js/hilo.js");
@@ -26,16 +26,29 @@
                 capa.innerHTML += "<hr>"
             });
 
-            fichero1.addEventListener("change", (e)=>{
+            fichero1.addEventListener("change", (e) => {
                 let fichero = e.target.files[0]
                 worker.postMessage(fichero);
             })
 
-            fichero2.addEventListener("change", (e)=>{
+            fichero2.addEventListener("change", (e) => {
                 let fichero = e.target.files[0]
                 worker2.postMessage(fichero);
             })
-          
+
+            fichero3.addEventListener("change", (e) => {
+                let fichero = e.target.files[0]
+
+                let reader = new FileReader();
+                reader.addEventListener('load', (e) => {
+                    // Enviar al hilo principal
+                    capa.innerHTML += "<hr>"
+                    capa.innerHTML += "<h3>HILO PRINCIPAL</h3>"
+                    capa.innerHTML += e.target.result + "<br>";
+                    capa.innerHTML += "<hr>"
+                })
+                reader.readAsText(fichero, 'iso-8859-1')
+            })
 
             let boton2 = document.getElementById("boton2");
             boton2.addEventListener("click", () => {
@@ -53,6 +66,8 @@
         <input type="file" id="fichero1" name="fichero1"><br>
         <label for="fichero2">Mensaje</label>
         <input type="file" id="fichero2" name="fichero2"><br>
+        <label for="fichero3">Mensaje</label>
+        <input type="file" id="fichero3" name="fichero3"><br>
         <!--<button type="button" id="boton1">Enviar</button>-->
         <button type="button" id="boton2">Terminate</button>
     </form>
