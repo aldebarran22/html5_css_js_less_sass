@@ -12,6 +12,7 @@ addEventListener("load", () => {
       // Comprobar si está conectado a un servidor
       if (socket != null && socket.readyState !== WebSocket.CLOSED) {
         socket.send(texto.value);
+        texto.value = "";
       } else {
         alert("No estás conectado a un servidor");
       }
@@ -25,6 +26,7 @@ addEventListener("load", () => {
 
     socket.addEventListener("open", () => {
       contenedor.innerHTML = "Conexión establecida<br>";
+      texto.value = "";
     });
 
     socket.addEventListener("message", async (e) => {
@@ -34,12 +36,12 @@ addEventListener("load", () => {
     });
 
     socket.addEventListener("error", (e) => {
-      contenedor.innerHTML += "ERROR: " + e.message;
+      contenedor.innerHTML += "ERROR: " + e.message + "<br>";
       alert("ERROR: " + e.message);
     });
 
     socket.addEventListener("close", () => {
-      contenedor.innerHTML += "Se ha desconectado del servidor";
+      contenedor.innerHTML += "Se ha desconectado del servidor<br>";
     });
   });
 
