@@ -11,7 +11,10 @@ const wss = new WebSocket.Server({ server });
 // Registrar eventos:
 wss.on("connection", (socket) => {
   // El parámetro socket es el socket del cliente
-  console.log("Se ha conectado un cliente");
+  console.log("Se ha conectado un cliente: ", socket._socket.remotePort);
+  console.log("Address: ", socket._socket.address());
+  console.log("RemoteAddress: ", socket._socket.remoteAddress);
+  console.log("Número de clientes conectados: ", wss.clients.size);
 
   // Comunicación con el cliente:
   socket.on("message", (data) => {
@@ -20,13 +23,12 @@ wss.on("connection", (socket) => {
 
     // Enviar mensajes al cliente
     socket.send("Servidor: " + data.toString());
-
   });
 
   // Un cliente se desconecta:
-  socket.on("close", () =>{
-    console.log("Se ha desconectado un cliente")
-  })
+  socket.on("close", () => {
+    console.log("Se ha desconectado un cliente");
+  });
 });
 
 // Activar el puerto del servidor:
