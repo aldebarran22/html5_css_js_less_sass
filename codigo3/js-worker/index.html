@@ -22,7 +22,7 @@
             });
 
             worker2.addEventListener("message", (e) => {
-                capa.innerHTML += e.data + "<br>";
+                capa.innerHTML += `<img src='${e.data}' alt='foto'>`;
                 capa.innerHTML += "<hr>"
             });
 

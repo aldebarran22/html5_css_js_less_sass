@@ -1,3 +1,4 @@
+/*
 function cargaFichero(fichero) {
   let reader = new FileReader();
   reader.addEventListener("load", (e) => {
@@ -5,12 +6,20 @@ function cargaFichero(fichero) {
     postMessage(e.target.result);
   });
   reader.readAsText(fichero, "iso-8859-1");
-}
+}*/
 
-console.log("Worker2 inicializado ...");
+const cargaImg = (fichero) => {
+  let reader = new FileReader();
+  reader.addEventListener("load", (e) => {
+    postMessage(e.target.result);
+  });
+  reader.readAsDataURL(fichero);
+};
+
+console.log("Worker2 img inicializado ...");
 
 onmessage = (e) => {
   setTimeout(() => {
-    cargaFichero(e.data);
+    cargaImg(e.data);
   }, 20000);
 };
