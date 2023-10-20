@@ -24,7 +24,9 @@ function analizarMensaje(obj, socket) {
       mapa[port] = obj.nick;
 
       // Enviar mensajes al cliente
-      socket.send({ type: 0, contenido: "Bienvenido: " + obj.nick });
+      socket.send(
+        JSON.stringify({ type: 0, contenido: "Bienvenido: " + obj.nick })
+      );
 
       // Presentar el nuevo usuario al resto de clientes:
       wss.clients.forEach((cliente) => {
@@ -54,6 +56,7 @@ wss.on("connection", (socket) => {
 
   // Comunicación con el cliente:
   socket.on("message", (data) => {
+    console.log("mensaje recibido: ", data.toString());
     let obj = JSON.parse(data.toString());
     analizarMensaje(obj, socket);
   });
