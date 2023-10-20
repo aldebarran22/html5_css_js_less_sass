@@ -1,5 +1,32 @@
 const url = "ws://localhost:8081";
 
+const SALUDO = 0;
+const NUEVO_USER = 1;
+const BAJA_USER = 2;
+
+const analizarMensaje = (mensaje, contenedor) => {
+  let obj = JSON.parse(mensaje);
+  let combo = document.getElementById("usuarios");
+
+  switch (obj.type) {
+    case SALUDO:
+      contenedor.innerHTML += `<p>${obj.contenido}</p>`;
+      break;
+
+    case NUEVO_USER:
+      // Se le da de alta en el combo usuarios
+      let option = document.createElement("option");
+      option.text = obj.nick;
+      combo.add(option);
+
+      break;
+
+    case BAJA_USER:
+      // Se le da de alta en el combo usuarios
+      break;
+  }
+};
+
 addEventListener("load", () => {
   let socket = null;
   let bconectar = document.getElementById("conectar");
@@ -37,7 +64,7 @@ addEventListener("load", () => {
     socket.addEventListener("message", async (e) => {
       // Salta cuando el cliente recibe un mensaje del servidor
       const mensaje = await e.data;
-      contenedor.innerHTML += mensaje + "<br>";
+      analizarMensaje(mensaje, contenedor);
     });
 
     socket.addEventListener("error", (e) => {
