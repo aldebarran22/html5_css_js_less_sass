@@ -32,7 +32,9 @@ function analizarMensaje(obj, socket) {
       wss.clients.forEach((cliente) => {
         if (cliente.readyState === WebSocket.OPEN) {
           if (cliente._socket.remotePort !== socket._socket.remotePort) {
-            cliente.send(`{type:1,nick:${mapa[socket._socket.remotePort]}}`);
+            cliente.send(
+              JSON.stringify({ type: 1, nick: mapa[socket._socket.remotePort] })
+            );
           }
         }
       });
