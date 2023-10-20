@@ -6,6 +6,22 @@ const cargaImg = (capa, fichero) => {
   reader.readAsDataURL(fichero);
 };
 
+const cargatxt = (capa, fichero) => {
+  let reader = new FileReader();
+  reader.addEventListener("load", (e) => {
+    capa.innerHTML = `<p>${e.target.result}</p>`;
+  });
+  reader.readAsText(fichero, "iso-8859-1");
+};
+
+const cargaBin = (capa, fichero) => {
+  let reader = new FileReader();
+  reader.addEventListener("load", (e) => {
+    capa.innerHTML = `<pre>${e.target.result}</pre>`;
+  });
+  reader.readAsBinaryString(fichero);
+};
+
 addEventListener("load", () => {
   let capa = document.getElementById("contenedor");
   let ficheros = document.querySelectorAll("form input");
