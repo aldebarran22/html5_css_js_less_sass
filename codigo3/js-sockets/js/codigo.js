@@ -22,7 +22,7 @@ addEventListener("load", () => {
   // Evento boton conectar
   bconectar.addEventListener("click", () => {
     // Solicitar un nick al usuario:
-    let nick = prompt('Teclea tu nick')
+    let nick = prompt("Teclea tu nick");
 
     // Crear la conexión con el Servidor:
     socket = new WebSocket(url);
@@ -31,7 +31,7 @@ addEventListener("load", () => {
       contenedor.innerHTML = "Conexión establecida<br>";
       texto.value = "";
 
-      socket.send(JSON.stringify({nick:nick}))
+      socket.send(JSON.stringify({ type: 1, nick: nick }));
     });
 
     socket.addEventListener("message", async (e) => {
