@@ -1,12 +1,16 @@
 const url = "ws://localhost:8081";
 
+let nick;
+
 const SALUDO = 0;
 const NUEVO_USER = 1;
 const BAJA_USER = 2;
+const MENSAJE_PRIVADO = 3;
+const MENSAJE_DIFUSION = 4;
 
-const analizarMensaje = (mensaje, contenedor) => {
+const analizarMensaje = (mensaje, contenedor, combo) => {
+  console.log("mensaje:", mensaje);
   let obj = JSON.parse(mensaje);
-  let combo = document.getElementById("usuarios");
 
   switch (obj.type) {
     case SALUDO:
@@ -17,13 +21,37 @@ const analizarMensaje = (mensaje, contenedor) => {
       // Se le da de alta en el combo usuarios
       let option = document.createElement("option");
       option.text = obj.nick;
+      option.value = obj.nick;
       combo.add(option);
-
       break;
 
     case BAJA_USER:
       // Se le da de alta en el combo usuarios
       break;
+
+    case MENSAJE_PRIVADO:
+      break;
+
+    case MENSAJE_DIFUSION:
+      break;
+  }
+};
+
+const enviarMensaje = (texto, combo, socket) => {
+  let nickDestino = combo.value;
+  if (nickDestino === "*") {
+    // Mensaje de difusion
+    socket.send(JSON.stringify({ type: 4, nick: nick, contenido: texto }));
+  } else {
+    // Es un mensaje privado:
+    socket.send(
+      JSON.stringify({
+        type: 3,
+        nick: nick,
+        nick2: nickDestino,
+        contenido: texto,
+      })
+    );
   }
 };
 
@@ -33,12 +61,13 @@ addEventListener("load", () => {
   let bdesconectar = document.getElementById("desconectar");
   let texto = document.getElementById("texto");
   let contenedor = document.getElementById("contenedor");
+  let combo = document.getElementById("usuarios");
 
   texto.addEventListener("keypress", (e) => {
     if (e.code === "Enter") {
       // Comprobar si está conectado a un servidor
       if (socket != null && socket.readyState !== WebSocket.CLOSED) {
-        socket.send(texto.value);
+        enviarMensaje(texto.value, combo, socket);
         texto.value = "";
       } else {
         alert("No estás conectado a un servidor");
@@ -49,7 +78,7 @@ addEventListener("load", () => {
   // Evento boton conectar
   bconectar.addEventListener("click", () => {
     // Solicitar un nick al usuario:
-    let nick = prompt("Teclea tu nick");
+    nick = prompt("Teclea tu nick");
 
     // Crear la conexión con el Servidor:
     socket = new WebSocket(url);
@@ -64,7 +93,7 @@ addEventListener("load", () => {
     socket.addEventListener("message", async (e) => {
       // Salta cuando el cliente recibe un mensaje del servidor
       const mensaje = await e.data;
-      analizarMensaje(mensaje, contenedor);
+      analizarMensaje(mensaje, contenedor, combo);
     });
 
     socket.addEventListener("error", (e) => {
